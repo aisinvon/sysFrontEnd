@@ -1,0 +1,30 @@
+{
+
+    "resource": {
+        "113": "Dongting Lake洞庭湖",
+        "117": "Yangtze River长江",
+        "119": "Qinghai Lake青海湖",
+        "120": "Huangpu River黄浦江",
+        "121": "Qiantang River钱塘江",
+        "122": "XiXi Wetland西溪湿地",
+        "124": "Jiu Xi九溪",
+        "125": "Poyang Lake鄱阳湖",
+        "126": "Taihu Lake太湖",
+        "127": "Yellow River黄河",
+        "129": "Grand Canal 大运河"
+    },
+    "meetingRoomId": [
+        100,
+        90,
+        30,
+        31,
+        43,
+        44,
+        45,
+        91,
+        42,
+        89,
+        33
+    ]
+
+}

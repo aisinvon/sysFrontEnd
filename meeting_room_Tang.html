@@ -1,0 +1,1011 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Meeting Room</title>
+        <link rel="stylesheet" type="text/css" href="./css/base.css" />
+        <link rel="stylesheet" type="text/css" href="./css/pris.css" />
+        <link rel="stylesheet" type="text/css" href="./css/plugins/jquery-calendar/jquery.calendar.css" />
+        <!-- jQuery ui-->
+        <link rel="stylesheet" type="text/css" href="./css/plugins/jquery-ui/jquery.ui.min.css" />
+    </head>
+    
+    <body>
+        
+        <script type="text/javascript">
+            document.getElementsByTagName('body')[0].className = 'w1200';
+        </script>
+        
+        <div class="pageWrapper">
+            <!-- top -->
+            <div class="top clearfix">
+                <div class="wrap">
+                    <a class="logo" href="">
+                        <img src="./images/logo.png" alt="Company" />
+                    </a>
+                    <img class="slogan" src="./images/slogan.png" alt="Company Hangzhou: Project Resource Information System (PRIS)" />
+                </div>
+            </div>
+            <!-- / top -->
+            <!-- nav -->
+            <div class="nav">
+                <div class="wrap">
+                    <ul class="clearfix">
+                        <!-- add class on, then that nav will be highlighted -->
+                        <li class="on">
+                            <a href="./">Homepage</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">My Staff</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="mystaff_bpo.html">BPO</a>
+                                </li>
+                                <li>
+                                    <a href="mystaff_ito.html">ITO</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">My Project</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="myproject_bpo.html">BPO</a>
+                                </li>
+                                <li>
+                                    <a href="myproject_ito.html">ITO</a>
+                                </li>
+                                <li>
+                                    <a href="myproject_pmo.html">PMO</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">Operation Service</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">Billing
+                                        <i></i>
+                                    </a>
+                                    <!-- third level menu -->
+                                    <ul>
+                                        <li>
+                                            <a href="billing_tl.html">Team Leader</a>
+                                        </li>
+                                        <li>
+                                            <a href="billing_pm.html">PM</a>
+                                        </li>
+                                        <li>
+                                            <a href="billing_pmo.html">PMO</a>
+                                        </li>
+                                    </ul>
+                                    <!-- / third level menu -->
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Invoice</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">Report Center</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">Executive Dashboard/Report</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Operational Report</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Atrack Customized report
+                                        <i></i>
+                                    </a>
+                                    <!-- third level menu -->
+                                    <ul>
+                                        <li>
+                                            <a href="structure_report_01_chart.html">Structure Report</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">Atrack Report</a>
+                                        </li>
+                                    </ul>
+                                    <!-- / third level menu -->
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Other</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- / nav -->
+            <!-- main content -->
+            <div class="main wrap">
+                <h3 class="pg_tit">Meeting Room
+<!--                    <a class="tab_lnk on" href="meeting_room_Tang.html">Tang</a>
+                    <a class="tab_lnk" href="meeting_room.html">Maxia</a>
+                    <a class="none tab_lnk" href="">Reserved</a>-->
+                </h3>
+                <!--meet_room-->
+                <div id="meet_room" class="meet_room">
+                    
+                    <!--employee id-->
+                    <input id="cur_eid" name="cur_eid" type="hidden" value="560162" />
+                    <!--employee name-->
+                    <input id="cur_ename" name="cur_ename" type="hidden" value="Feng, Weixing" />
+                    <!--sum of meeting number-->
+                    <input id="cur_uidSum" name="cur_uidSum" type="hidden" value="1000000" />
+                    <!--today-->
+                    <input id="cur_date" name="cur_date" type="hidden" value="2014-05-28" />
+                    <input id="data_meeting_prefix" type="hidden" value="/api/MeetingRoomBooking/GetBookings" />
+                    <input id="data_post_new" type="hidden" value="/api/MeetingRoomBooking/Booking" />
+                    <input id="data_post_delete" type="hidden" value="/api/MeetingRoomBooking/Delete" />
+                    <input id="data_post_mail" type="hidden" value="/api/MeetingRoomBooking/Booked" />
+                    
+                    <ul class="tab_tit clearfix">
+                        <li data-room="./js/json/4F-room.json" data-meeting="./js/json/4F-meeting.json">Tang 4F<i></i></li>
+                        <li data-room="./js/json/5F-room.json" data-meeting="./js/json/5F-meeting.json">Tang 5F<i></i></li>
+                        <li data-room="./js/json/6F-room.json" data-meeting="./js/json/6F-meeting.json">Tang 6F<i></i></li>
+                    </ul>
+
+                    <span class="tab_defauRoom" data-post-defauRoom="/api/setDefauRoom">
+                        <label for="tab_defauRoom_val">Set this tab to default</label>
+                        <input id="tab_defauRoom_val" class="checkbox tab_defauRoom_val" type="checkbox" checked="checked" value="" />
+                    </span>
+
+                    <!--TT-4F-->
+                    <div class="tab_con clearfix">
+                        <!-- date_chos -->
+                        <div class="date_chos">
+                            <span class="date">
+                                <!--weekday-->
+                                <em></em>
+                                <!--date-->
+                                <strong>23</strong>
+                            </span>
+                            <!--year, month-->                            
+                            <ins></ins>
+                            <input type="text" class="date_month_meeting" />
+                        </div>
+                        <!-- / date_chos -->
+                        <!-- tab_con_out -->
+                        <div class="tab_con_out">
+                            <div class="tab_con_in">
+                                <!--room_hd-->
+                                <div class="room_hd clearfix">
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip no" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <i class="deviceIco mapIco tit_tip" title="Click to show map"></i>
+                                        <h5>Long Jing 龙井</h5>
+                                        <p>(4F)</p>    
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Maxia</p>
+                                                    <p>Building:J2</p>
+                                                    <p>Floor:4F</p>
+                                                    <p>Meeting Room:Grafton</p>
+                                                <div class="img_r">
+                                                    <img src="./images/room_img/map.png" alt="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip no" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <i class="deviceIco mapIco tit_tip" title="Click to show map"></i>
+                                        <h5>Tai Shan 泰山</h5>
+                                        <p>(4F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Maxia</p>
+                                                    <p>Building:J2</p>
+                                                    <p>Floor:4F</p>
+                                                    <p>Meeting Room:Grafton</p>
+                                                <div class="img_r">
+                                                    <img src="./images/room_img/map.png" alt="" />                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip no" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <i class="deviceIco mapIco tit_tip" title="Click to show map"></i>
+                                        <h5>Shangri-La 香格里拉</h5>
+                                        <p>(4F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Maxia</p>
+                                                    <p>Building:J2</p>
+                                                    <p>Floor:4F</p>
+                                                    <p>Meeting Room:Grafton</p>
+                                                <div class="img_r">
+                                                    <img src="./images/room_img/map.png" alt="" />                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip no" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip" title="VoIP"></i>
+                                        <i class="deviceIco mapIco tit_tip" title="Click to show map"></i>
+                                        <h5>Huang Shan 黄山</h5>
+                                        <p>(4F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Maxia</p>
+                                                    <p>Building:J2</p>
+                                                    <p>Floor:4F</p>
+                                                    <p>Meeting Room:Grafton</p>
+                                                <div class="img_r">
+                                                    <img src="./images/room_img/map.png" alt="" />                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip no" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip no" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <i class="deviceIco mapIco tit_tip" title="Click to show map"></i>
+                                        <h5>Qomolangma 珠穆朗玛</h5>
+                                        <p>(4F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Maxia</p>
+                                                    <p>Building:J2</p>
+                                                    <p>Floor:4F</p>
+                                                    <p>Meeting Room:Grafton</p>
+                                                <div class="img_r">
+                                                    <img src="./images/room_img/map.png" alt="" />                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                </div>
+                                <!-- / room_hd-->
+                                <div class="meet_cale">
+                                    <span class="meet_scroll_btn up"></span>
+                                    <span class="meet_scroll_btn down"></span>
+                                    <div class="meet_cale_in"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / tab_con_in -->
+                    </div>
+                    <!-- / TT-4F-->
+
+                    <!--TT-5F-->
+                    <div class="tab_con clearfix">
+                        <!-- date_chos -->
+                        <div class="date_chos">
+                            <span class="date">
+                                <!--weekday-->
+                                <em></em>
+                                <!--date-->
+                                <strong>23</strong>
+                            </span>
+                            <!--year, month-->                            
+                            <ins></ins>
+                            <input type="text" class="date_month_meeting" />
+                        </div>
+                        <!-- / date_chos -->
+                        <!-- tab_con_out -->
+                        <div class="tab_con_out">
+                            <div class="tab_con_in">
+                                <!--room_hd-->
+                                <div class="room_hd clearfix">
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <i class="deviceIco mapIco tit_tip" title="Click to show map"></i>
+                                        <h5>Dongting Lake 洞庭湖</h5>
+                                        <p>(5F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Maxia</p>
+                                                    <p>Building:J2</p>
+                                                    <p>Floor:4F</p>
+                                                    <p>Meeting Room:Grafton</p>
+                                                <div class="img_r">
+                                                    <img src="./images/room_img/map.png" alt="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip no" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip no" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <i class="deviceIco mapIco tit_tip" title="Click to show map"></i>
+                                        <h5>Poyang Lake 鄱阳湖</h5>
+                                        <p>(5F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Maxia</p>
+                                                    <p>Building:J2</p>
+                                                    <p>Floor:4F</p>
+                                                    <p>Meeting Room:Grafton</p>
+                                                <div class="img_r">
+                                                    <img src="./images/room_img/map.png" alt="" />                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip no" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip no" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <i class="deviceIco mapIco tit_tip" title="Click to show map"></i>
+                                        <h5>Taihu Lake 太湖</h5>
+                                        <p>(5F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Maxia</p>
+                                                    <p>Building:J2</p>
+                                                    <p>Floor:4F</p>
+                                                    <p>Meeting Room:Grafton</p>
+                                                <div class="img_r">
+                                                    <img src="./images/room_img/map.png" alt="" />                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip no" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip no" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <i class="deviceIco mapIco tit_tip" title="Click to show map"></i>
+                                        <h5>Yellow River 黄河</h5>
+                                        <p>(5F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Maxia</p>
+                                                    <p>Building:J2</p>
+                                                    <p>Floor:4F</p>
+                                                    <p>Meeting Room:Grafton</p>
+                                                <div class="img_r">
+                                                    <img src="./images/room_img/map.png" alt="" />                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip" title="VoIP"></i>
+                                        <i class="deviceIco mapIco tit_tip" title="Click to show map"></i>
+                                        <h5>Yangtze River 长江</h5>
+                                        <p>(5F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Maxia</p>
+                                                    <p>Building:J2</p>
+                                                    <p>Floor:4F</p>
+                                                    <p>Meeting Room:Grafton</p>
+                                                <div class="img_r">
+                                                    <img src="./images/room_img/map.png" alt="" />                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip no" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip no" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <i class="deviceIco mapIco tit_tip" title="Click to show map"></i>
+                                        <h5>Grand  Canal 大运河</h5>
+                                        <p>(5F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Maxia</p>
+                                                    <p>Building:J2</p>
+                                                    <p>Floor:4F</p>
+                                                    <p>Meeting Room:Grafton</p>
+                                                <div class="img_r">
+                                                    <img src="./images/room_img/map.png" alt="" />                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip" title="VoIP"></i>
+                                        <i class="deviceIco mapIco tit_tip" title="Click to show map"></i>
+                                        <h5>Qinghai Lake 青海湖</h5>
+                                        <p>(5F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Maxia</p>
+                                                    <p>Building:J2</p>
+                                                    <p>Floor:4F</p>
+                                                    <p>Meeting Room:Grafton</p>
+                                                <div class="img_r">
+                                                    <img src="./images/room_img/map.png" alt="" />                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip" title="VoIP"></i>
+                                        <i class="deviceIco mapIco tit_tip" title="Click to show map"></i>
+                                        <h5>Huangpu River 黄浦江</h5>
+                                        <p>(5F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Maxia</p>
+                                                    <p>Building:J2</p>
+                                                    <p>Floor:4F</p>
+                                                    <p>Meeting Room:Grafton</p>
+                                                <div class="img_r">
+                                                    <img src="./images/room_img/map.png" alt="" />                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip no" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <i class="deviceIco mapIco tit_tip" title="Click to show map"></i>
+                                        <h5>Qiantang River 钱塘江</h5>
+                                        <p>(5F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Maxia</p>
+                                                    <p>Building:J2</p>
+                                                    <p>Floor:4F</p>
+                                                    <p>Meeting Room:Grafton</p>
+                                                <div class="img_r">
+                                                    <img src="./images/room_img/map.png" alt="" />                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip no" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <i class="deviceIco mapIco tit_tip" title="Click to show map"></i>
+                                        <h5>XiXi Wetland 西溪湿地</h5>
+                                        <p>(5F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Maxia</p>
+                                                    <p>Building:J2</p>
+                                                    <p>Floor:4F</p>
+                                                    <p>Meeting Room:Grafton</p>
+                                                <div class="img_r">
+                                                    <img src="./images/room_img/map.png" alt="" />                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip no" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <i class="deviceIco mapIco tit_tip" title="Click to show map"></i>
+                                        <h5>Jiu Xi 九溪</h5>
+                                        <p>(5F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Maxia</p>
+                                                    <p>Building:J2</p>
+                                                    <p>Floor:4F</p>
+                                                    <p>Meeting Room:Grafton</p>
+                                                <div class="img_r">
+                                                    <img src="./images/room_img/map.png" alt="" />                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                </div>
+                                <!-- / room_hd-->
+                                <div class="meet_cale">
+                                    <span class="meet_scroll_btn up"></span>
+                                    <span class="meet_scroll_btn down"></span>
+                                    <div class="meet_cale_in"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / tab_con_in -->
+                    </div>
+                    <!-- / TT-5F-->
+
+                    <!--reserved-->
+                    <div class="tab_con clearfix">
+                        <!-- date_chos -->
+                        <div class="date_chos">
+                            <span class="date">
+                                <!--weekday-->
+                                <em></em>
+                                <!--date-->
+                                <strong>23</strong>
+                            </span>
+                            <!--year, month-->                            
+                            <ins></ins>
+                            <input type="text" class="date_month_meeting" />
+                        </div>
+                        <!-- / date_chos -->
+                        <!-- tab_con_out -->
+                        <div class="tab_con_out">
+                            <div class="tab_con_in">
+                                <!--room_hd-->
+                                <div class="room_hd clearfix">
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <h5>Shanghai</h5>
+                                        <p>(2F)</p>
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip no" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip no" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <h5>Kansas</h5>
+                                        <p>(3F)</p>
+                                    </div>
+                                    <div class="room_status">
+                                        
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip no" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip no" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <h5>Cambridge</h5>
+                                        <p>(4F)</p>
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip no" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip no" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <h5>Grafton</h5>
+                                        <p>(4F)</p>
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip no" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip no" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <h5>Public Garden</h5>
+                                        <p>(5F)</p>
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip no" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip no" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <h5>Westborough</h5>
+                                        <p>(5F)</p>
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip" title="VoIP"></i>
+                                        <h5>Milton</h5>
+                                        <p>(4F)</p>
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip" title="VoIP"></i>
+                                        <h5>Westwood</h5>
+                                        <p>(5F)</p>
+                                    </div>
+                                    <div class="room_status">                                
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i class="deviceIco tvIco tit_tip" title="Computer"></i>
+                                        <i class="deviceIco projIco tit_tip no" title="Video"></i>
+                                        <i class="deviceIco telIco tit_tip no" title="VoIP"></i>
+                                        <h5>Hong Kong</h5>
+                                        <p>(4F)</p>
+                                    </div>
+                                    <div class="room_status">
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i title="Computer" class="deviceIco tvIco tit_tip no"></i>
+                                        <i title="Video" class="deviceIco projIco tit_tip no"></i>
+                                        <i title="VoIP" class="deviceIco telIco tit_tip no"></i>
+                                        <h5>3F-K11</h5>
+                                        <p>(3F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Tiantang</p>
+                                                <p>Building:TT-3F(FA Only)</p>
+                                                <p>Floor:3F</p>
+                                                <p>Meeting Room:3F-K11</p>
+                                                <div class="img_r">
+                                                    <img alt="" src="./images/room_img/map.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i title="Computer" class="deviceIco tvIco tit_tip no"></i>
+                                        <i title="Video" class="deviceIco projIco tit_tip no"></i>
+                                        <i title="VoIP" class="deviceIco telIco tit_tip no"></i>
+                                        <h5>3F-Q11</h5>
+                                        <p>(3F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Tiantang</p>
+                                                <p>Building:TT-3F(FA Only)</p>
+                                                <p>Floor:3F</p>
+                                                <p>Meeting Room:3F-Q11</p>
+                                                <div class="img_r">
+                                                    <img alt="" src="./images/room_img/map.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i title="Computer" class="deviceIco tvIco tit_tip no"></i>
+                                        <i title="Video" class="deviceIco projIco tit_tip no"></i>
+                                        <i title="VoIP" class="deviceIco telIco tit_tip no"></i>
+                                        <h5>4F-B11 Manger Office</h5>
+                                        <p>(4F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Tiantang</p>
+                                                <p>Building:TT-4F</p>
+                                                <p>Floor:4F</p>
+                                                <p>Meeting Room:4F-B11 Manger Office</p>
+                                                <div class="img_r">
+                                                    <img alt="" src="./images/room_img">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i title="Computer" class="deviceIco tvIco tit_tip "></i>
+                                        <i title="Video" class="deviceIco projIco tit_tip no"></i>
+                                        <i title="VoIP" class="deviceIco telIco tit_tip no"></i>
+                                        <h5>J2-5F-A25</h5>
+                                        <p>(5F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Insigma</p>
+                                                <p>Building:J2</p>
+                                                <p>Floor:5F</p>
+                                                <p>Meeting Room:J2-5F-A25</p>
+                                                <div class="img_r">
+                                                    <img alt="" src="./images/room_img">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i title="Computer" class="deviceIco tvIco tit_tip no"></i>
+                                        <i title="Video" class="deviceIco projIco tit_tip no"></i>
+                                        <i title="VoIP" class="deviceIco telIco tit_tip no"></i>
+                                        <h5>J2-5F-A21</h5>
+                                        <p>(5F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Insigma</p>
+                                                <p>Building:J2</p>
+                                                <p>Floor:5F</p>
+                                                <p>Meeting Room:J2-5F-A21</p>
+                                                <div class="img_r">
+                                                    <img alt="" src="./images/room_img">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i title="Computer" class="deviceIco tvIco tit_tip no"></i>
+                                        <i title="Video" class="deviceIco projIco tit_tip no"></i>
+                                        <i title="" class="deviceIco telIco tit_tip no" data-title="VoIP"></i>
+                                        <h5>J2-5F-A24</h5>
+                                        <p>(5F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Insigma</p>
+                                                <p>Building:J2</p>
+                                                <p>Floor:5F</p>
+                                                <p>Meeting Room:J2-5F-A24</p>
+                                                <div class="img_r">
+                                                    <img alt="" src="./images/room_img">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i title="" class="deviceIco tvIco tit_tip no" data-title="Computer"></i>
+                                        <i title="Video" class="deviceIco projIco tit_tip no"></i>
+                                        <i title="VoIP" class="deviceIco telIco tit_tip no"></i>
+                                        <h5>4F-K11 Manager Office</h5>
+                                        <p>(4F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Tiantang</p>
+                                                <p>Building:TT-4F</p>
+                                                <p>Floor:4F</p>
+                                                <p>Meeting Room:4F-K11 Manager Office</p>
+                                                <div class="img_r">
+                                                    <img alt="" src="./images/room_img">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i title="Computer" class="deviceIco tvIco tit_tip no"></i>
+                                        <i title="Video" class="deviceIco projIco tit_tip no"></i>
+                                        <i title="VoIP" class="deviceIco telIco tit_tip no"></i>
+                                        <h5>4F-O11 Manager Office</h5>
+                                        <p>(4F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Tiantang</p>
+                                                <p>Building:TT-4F</p>
+                                                <p>Floor:4F</p>
+                                                <p>Meeting Room:4F-O11 Manager Office</p>
+                                                <div class="img_r">
+                                                    <img alt="" src="./images/room_img">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                    <div class="room_status">
+                                        <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                        <i title="Computer" class="deviceIco tvIco tit_tip no"></i>
+                                        <i title="Video" class="deviceIco projIco tit_tip no"></i>
+                                        <i title="VoIP" class="deviceIco telIco tit_tip no"></i>
+                                        <h5>4F-Q11 Manager Office</h5>
+                                        <p>(4F)</p>
+                                        <!--room_intro-->
+                                        <div class="room_intro jsTip">
+                                            <i class="squareCloseIco pop_win_close"></i>
+                                            <div class="room_intro_in clearfix">
+                                                <p>Location:Tiantang</p>
+                                                <p>Building:TT-4F</p>
+                                                <p>Floor:4F</p>
+                                                <p>Meeting Room:4F-Q11 Manager Office</p>
+                                                <div class="img_r">
+                                                    <img alt="" src="./images/room_img">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ room_intro-->
+                                    </div>
+                                </div>
+                                <!-- / room_hd-->
+                                <div class="meet_cale">
+                                    <span class="meet_scroll_btn up"></span>
+                                    <span class="meet_scroll_btn down"></span>
+                                    <div class="meet_cale_in"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / tab_con_in -->
+                    </div>
+                    <!-- / reserved-->
+
+                </div>
+                <!-- / meet_room-->
+            </div>
+            <!-- / main content -->
+            
+            <!-- footer -->
+            <div class="footer clearfix">
+                <div class="wrap">
+                    <a href="homepage.html" class="logo">Company</a>
+                    <ul>
+                        <li>
+                            <a href="">SSTC</a>
+                        </li>
+                        <li>
+                            <a href="">Atrack</a>
+                        </li>
+                        <li>
+                            <a href="">SSHOME</a>
+                        </li>
+                        <li>
+                            <a href="">LMS</a>
+                        </li>
+                        <li>
+                            <a href="">Support</a>
+                        </li>
+                        <li>
+                            <a href="">eBusiness</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- / footer -->
+            
+            <!-- fixed elements -->
+            <div class="fixed">
+                <a title="Go to top" class="btn to_top" href="javascript:;">Go to top</a>
+                <a title="Mail to admin" class="btn to_mail" href="mailto:admin@xxxxx.com">Mail to admin</a>
+                <a title="MIS Feedback" id="to_feedback" class="btn to_feedback" href="javascript:;">
+                    MIS Feedback
+                    <!-- feedback pop win -->
+                    <div class="pop_feedback">
+                        <i class="squareCloseIco pop_win_close"></i>
+                        <h4><i class="feedbackIco"></i>MIS Feedback</h4>
+                        <p>MIS Feedback lets you send PMO suggestions about our products. We welcome problem 
+reports, feature ideas and general comments.</p>
+                        <p>Start by writting a brief description:</p>
+                        <textarea name="" id=""></textarea>
+                        <p class="tr">
+                            <button type="button" class="js_btn_feedback black_btn prim">Send Feedback</button>
+                        </p>
+                    </div>
+                    <!-- / feedback pop win -->
+                </a>
+            </div>
+            <!-- / fixed elements -->
+            
+            <!--mask of pop up window-->
+            <div id="pop_win_mask" class="pop_win_mask"></div>
+            <!-- pop up window -->
+            <div id="pop_win" class="pop_win">                
+                <!--pop up when success-->
+                <div class="pop_win_in pop_meeting">           
+                    <p>
+                        <strong class="label">Time:</strong>
+                        <span id="new_meet_time"></span>
+                    </p>
+                    <p>
+                        <strong class="label">Requestor:</strong>
+                        <span id="new_meet_requ"></span>
+                    </p>
+                    <p>
+                        <strong class="label">Meeting Subject (Optional):</strong>
+                        <input id="new_meet_subj" type="text" class="text" />
+                    </p>
+                    <p class="mt tr">
+                        <button type="button" class="flat_blue_btn js_sbmt_meet">Ok</button>
+                    </p>
+                    <i class="delInfoIco pop_win_close"></i>
+                </div>
+                <!--pop up when fail-->
+                <div class="pop_win_in pop_meeting_eror">   
+                    <p id="meeting_eror_tip"></p>
+                    <i class="delInfoIco pop_win_close"></i>
+                </div>
+                <!--pop up when loading-->
+                <div class="pop_win_in center pop_loading">           
+                    <img alt="loading" src="./images/pris_loading.gif">
+               </div>
+               <!--mask inside pop up window-->
+                <div class="pop_win_in_mask"></div>
+            </div>
+            <!-- / pop up window -->
+            
+            <script type="text/javascript" src="./js/jQuery.1.7.2.min.js"></script>
+            <script type="text/javascript" src="./js/pris.js"></script>            
+            <!-- jquery ui -->
+            <script type="text/javascript" src="./js/plugins/jquery-ui/jquery.ui.min.js"></script>
+            <!--jquery calendar-->
+            <script type="text/javascript" src="./js/plugins/jquery-calendar/jquery.calendar.js"></script>
+            <script type="text/javascript">
+                $(function() {                                        
+                    fedPris.meetingRoom();                    
+                });
+            </script>
+        </div>
+    </body>
+    
+</html>

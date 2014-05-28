@@ -1,0 +1,53 @@
+[
+    
+    {
+        "uid": "80331",
+        "begins": "2014-01-15 10:30:00",
+        "ends": "2014-01-15 11:30:00",
+        "resource": 35,
+        "notes": "",
+        "title": "Zhang, Peng",
+        "eid": "551536",
+        "meetingRoomId": 52
+    },
+    {
+        "uid": "14814",
+        "begins": "2014-01-15 10:30:00",
+        "ends": "2014-01-15 11:30:00",
+        "resource": 30,
+        "notes": "",
+        "title": "Geng, Hao",
+        "eid": "521957",
+        "meetingRoomId": 53
+    },
+    {
+        "uid": "27692",
+        "begins": "2014-01-15 10:30:00",
+        "ends": "2014-01-15 11:30:00",
+        "resource": 28,
+        "notes": "",
+        "title": "Jin, Ying",
+        "eid": "507677",
+        "meetingRoomId": 83
+    },
+    {
+        "uid": "14815",
+        "begins": "2014-01-15 11:30:00",
+        "ends": "2014-01-15 12:00:00",
+        "resource": 30,
+        "notes": "",
+        "title": "Geng, Hao",
+        "eid": "521957",
+        "meetingRoomId": 53
+    },
+    {
+        "uid": "75517",
+        "begins": "2014-01-15 12:30:00",
+        "ends": "2014-01-15 14:00:00",
+        "resource": 30,
+        "notes": "",
+        "title": "Ye, Xiaojun",
+        "eid": "503325",
+        "meetingRoomId": 53
+    }
+]

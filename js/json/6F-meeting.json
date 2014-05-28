@@ -1,0 +1,444 @@
+[
+
+    {
+        "uid": "93706",
+        "begins": "2014-05-28 10:30:00",
+        "ends": "2014-05-28 11:30:00",
+        "resource": 39,
+        "notes": null,
+        "title": "Ye, Xiaoling",
+        "eid": "464101",
+        "meetingRoomId": 84
+    },
+    {
+        "uid": "95634",
+        "begins": "2014-05-28 17:00:00",
+        "ends": "2014-05-28 18:00:00",
+        "resource": 37,
+        "notes": "",
+        "title": "Chen, Yao Tina",
+        "eid": "467886",
+        "meetingRoomId": 69
+    },
+    {
+        "uid": "96270",
+        "begins": "2014-05-28 10:00:00",
+        "ends": "2014-05-28 11:30:00",
+        "resource": 37,
+        "notes": "GC SQA Weekly Meeting",
+        "title": "Zheng, Yu",
+        "eid": "521915",
+        "meetingRoomId": 69
+    },
+    {
+        "uid": "96617",
+        "begins": "2014-05-28 14:00:00",
+        "ends": "2014-05-28 15:00:00",
+        "resource": 41,
+        "notes": null,
+        "title": "Fang, Yuan",
+        "eid": "519253",
+        "meetingRoomId": 55
+    },
+    {
+        "uid": "97021",
+        "begins": "2014-05-28 09:30:00",
+        "ends": "2014-05-28 11:00:00",
+        "resource": 43,
+        "notes": null,
+        "title": "Yaofeng, Li",
+        "eid": "547855",
+        "meetingRoomId": 99
+    },
+    {
+        "uid": "98677",
+        "begins": "2014-05-28 09:00:00",
+        "ends": "2014-05-28 10:30:00",
+        "resource": 44,
+        "notes": null,
+        "title": "Chen, Jiong",
+        "eid": "462205",
+        "meetingRoomId": 101
+    },
+    {
+        "uid": "99075",
+        "begins": "2014-05-28 15:00:00",
+        "ends": "2014-05-28 15:30:00",
+        "resource": 40,
+        "notes": null,
+        "title": "Wu, Liting",
+        "eid": "560892",
+        "meetingRoomId": 53
+    },
+    {
+        "uid": "99805",
+        "begins": "2014-05-28 15:30:00",
+        "ends": "2014-05-28 16:00:00",
+        "resource": 42,
+        "notes": null,
+        "title": "Yang, Xiaomin",
+        "eid": "539796",
+        "meetingRoomId": 67
+    },
+    {
+        "uid": "100292",
+        "begins": "2014-05-28 13:00:00",
+        "ends": "2014-05-28 15:00:00",
+        "resource": 39,
+        "notes": "Optimization of SOI views #3",
+        "title": "Pynchon, Henry",
+        "eid": "512889",
+        "meetingRoomId": 84
+    },
+    {
+        "uid": "100960",
+        "begins": "2014-05-28 16:00:00",
+        "ends": "2014-05-28 16:30:00",
+        "resource": 45,
+        "notes": null,
+        "title": "Shou, Wenqiong",
+        "eid": "516020",
+        "meetingRoomId": 52
+    },
+    {
+        "uid": "101213",
+        "begins": "2014-05-28 10:00:00",
+        "ends": "2014-05-28 10:30:00",
+        "resource": 45,
+        "notes": null,
+        "title": "Yin, Ming",
+        "eid": "464308",
+        "meetingRoomId": 52
+    },
+    {
+        "uid": "102038",
+        "begins": "2014-05-28 15:00:00",
+        "ends": "2014-05-28 16:30:00",
+        "resource": 41,
+        "notes": null,
+        "title": "Shen, Xianping",
+        "eid": "539828",
+        "meetingRoomId": 55
+    },
+    {
+        "uid": "102071",
+        "begins": "2014-05-28 13:30:00",
+        "ends": "2014-05-28 14:30:00",
+        "resource": 44,
+        "notes": null,
+        "title": "Wang, Lipei",
+        "eid": "539060",
+        "meetingRoomId": 101
+    },
+    {
+        "uid": "102164",
+        "begins": "2014-05-28 17:00:00",
+        "ends": "2014-05-28 18:00:00",
+        "resource": 44,
+        "notes": null,
+        "title": "Tong, Xinhui",
+        "eid": "495291",
+        "meetingRoomId": 101
+    },
+    {
+        "uid": "102420",
+        "begins": "2014-05-28 10:00:00",
+        "ends": "2014-05-28 11:00:00",
+        "resource": 38,
+        "notes": "CASS MI I5 pre-planning",
+        "title": "Ye, Youlong",
+        "eid": "534463",
+        "meetingRoomId": 83
+    },
+    {
+        "uid": "102442",
+        "begins": "2014-05-28 15:30:00",
+        "ends": "2014-05-28 16:30:00",
+        "resource": 37,
+        "notes": null,
+        "title": "Ye, Miaoxiang",
+        "eid": "520914",
+        "meetingRoomId": 69
+    },
+    {
+        "uid": "102443",
+        "begins": "2014-05-28 15:30:00",
+        "ends": "2014-05-28 16:30:00",
+        "resource": 43,
+        "notes": null,
+        "title": "Ye, Miaoxiang",
+        "eid": "520914",
+        "meetingRoomId": 99
+    },
+    {
+        "uid": "102476",
+        "begins": "2014-05-28 13:30:00",
+        "ends": "2014-05-28 15:00:00",
+        "resource": 43,
+        "notes": null,
+        "title": "Shou, Wenqiong",
+        "eid": "516020",
+        "meetingRoomId": 99
+    },
+    {
+        "uid": "102477",
+        "begins": "2014-05-28 15:00:00",
+        "ends": "2014-05-28 15:30:00",
+        "resource": 43,
+        "notes": null,
+        "title": "Shou, Wenqiong",
+        "eid": "516020",
+        "meetingRoomId": 99
+    },
+    {
+        "uid": "102528",
+        "begins": "2014-05-28 10:00:00",
+        "ends": "2014-05-28 11:00:00",
+        "resource": 42,
+        "notes": null,
+        "title": "Li, Zhonghai",
+        "eid": "464219",
+        "meetingRoomId": 67
+    },
+    {
+        "uid": "102550",
+        "begins": "2014-05-28 17:00:00",
+        "ends": "2014-05-28 18:30:00",
+        "resource": 42,
+        "notes": null,
+        "title": "Li, Lin",
+        "eid": "524488",
+        "meetingRoomId": 67
+    },
+    {
+        "uid": "102551",
+        "begins": "2014-05-28 17:00:00",
+        "ends": "2014-05-28 18:30:00",
+        "resource": 43,
+        "notes": null,
+        "title": "Li, Lin",
+        "eid": "524488",
+        "meetingRoomId": 99
+    },
+    {
+        "uid": "102578",
+        "begins": "2014-05-28 13:30:00",
+        "ends": "2014-05-28 14:00:00",
+        "resource": 38,
+        "notes": "meeting",
+        "title": "Zhang, Zongyan",
+        "eid": "536018",
+        "meetingRoomId": 83
+    },
+    {
+        "uid": "102589",
+        "begins": "2014-05-28 14:00:00",
+        "ends": "2014-05-28 14:30:00",
+        "resource": 37,
+        "notes": "meeting time",
+        "title": "Jing, Shuang",
+        "eid": "548652",
+        "meetingRoomId": 69
+    },
+    {
+        "uid": "102625",
+        "begins": "2014-05-28 13:00:00",
+        "ends": "2014-05-28 15:30:00",
+        "resource": 42,
+        "notes": null,
+        "title": "Xu, Yuan",
+        "eid": "515575",
+        "meetingRoomId": 67
+    },
+    {
+        "uid": "102633",
+        "begins": "2014-05-28 15:00:00",
+        "ends": "2014-05-28 16:30:00",
+        "resource": 44,
+        "notes": null,
+        "title": "Hu, Yuejiao",
+        "eid": "519498",
+        "meetingRoomId": 101
+    },
+    {
+        "uid": "102653",
+        "begins": "2014-05-28 16:30:00",
+        "ends": "2014-05-28 17:00:00",
+        "resource": 39,
+        "notes": null,
+        "title": "Wu, Dejun",
+        "eid": "458482",
+        "meetingRoomId": 84
+    },
+    {
+        "uid": "102660",
+        "begins": "2014-05-28 10:30:00",
+        "ends": "2014-05-28 11:00:00",
+        "resource": 45,
+        "notes": null,
+        "title": "Jin, Shunjing",
+        "eid": "502124",
+        "meetingRoomId": 52
+    },
+    {
+        "uid": "102715",
+        "begins": "2014-05-28 10:00:00",
+        "ends": "2014-05-28 11:30:00",
+        "resource": 40,
+        "notes": null,
+        "title": "Wu, Bin",
+        "eid": "539795",
+        "meetingRoomId": 53
+    },
+    {
+        "uid": "102729",
+        "begins": "2014-05-28 11:00:00",
+        "ends": "2014-05-28 11:30:00",
+        "resource": 45,
+        "notes": null,
+        "title": "Jin, Shunjing",
+        "eid": "502124",
+        "meetingRoomId": 52
+    },
+    {
+        "uid": "102740",
+        "begins": "2014-05-28 09:00:00",
+        "ends": "2014-05-28 11:00:00",
+        "resource": 41,
+        "notes": null,
+        "title": "Qian, Xueming",
+        "eid": "540272",
+        "meetingRoomId": 55
+    },
+    {
+        "uid": "102741",
+        "begins": "2014-05-28 13:30:00",
+        "ends": "2014-05-28 14:00:00",
+        "resource": 37,
+        "notes": null,
+        "title": "Hu, Ye",
+        "eid": "506642",
+        "meetingRoomId": 69
+    },
+    {
+        "uid": "102745",
+        "begins": "2014-05-28 10:00:00",
+        "ends": "2014-05-28 10:30:00",
+        "resource": 39,
+        "notes": null,
+        "title": "Zhang, Peng",
+        "eid": "458436",
+        "meetingRoomId": 84
+    },
+    {
+        "uid": "102753",
+        "begins": "2014-05-28 16:00:00",
+        "ends": "2014-05-28 17:00:00",
+        "resource": 40,
+        "notes": null,
+        "title": "Chen, Deyu",
+        "eid": "501589",
+        "meetingRoomId": 53
+    },
+    {
+        "uid": "102766",
+        "begins": "2014-05-28 13:00:00",
+        "ends": "2014-05-28 14:30:00",
+        "resource": 40,
+        "notes": "GEC 2.2 Design review",
+        "title": "Wang, Xiaojuan",
+        "eid": "464297",
+        "meetingRoomId": 53
+    },
+    {
+        "uid": "102771",
+        "begins": "2014-05-28 14:30:00",
+        "ends": "2014-05-28 15:00:00",
+        "resource": 37,
+        "notes": "Test report dicussion for RSS team",
+        "title": "Ye, Minke",
+        "eid": "497694",
+        "meetingRoomId": 69
+    },
+    {
+        "uid": "102795",
+        "begins": "2014-05-28 12:00:00",
+        "ends": "2014-05-28 13:00:00",
+        "resource": 42,
+        "notes": null,
+        "title": "Zhang, Weiliang",
+        "eid": "524591",
+        "meetingRoomId": 67
+    },
+    {
+        "uid": "102796",
+        "begins": "2014-05-28 13:00:00",
+        "ends": "2014-05-28 14:00:00",
+        "resource": 45,
+        "notes": null,
+        "title": "Chen, Jiong",
+        "eid": "462205",
+        "meetingRoomId": 52
+    },
+    {
+        "uid": "102798",
+        "begins": "2014-05-28 13:00:00",
+        "ends": "2014-05-28 14:00:00",
+        "resource": 41,
+        "notes": null,
+        "title": "Jin, Yulin",
+        "eid": "570116",
+        "meetingRoomId": 55
+    },
+    {
+        "uid": "102802",
+        "begins": "2014-05-28 14:00:00",
+        "ends": "2014-05-28 14:30:00",
+        "resource": 38,
+        "notes": null,
+        "title": "Dai, Taotao",
+        "eid": "536664",
+        "meetingRoomId": 83
+    },
+    {
+        "uid": "102810",
+        "begins": "2014-05-28 14:30:00",
+        "ends": "2014-05-28 15:00:00",
+        "resource": 38,
+        "notes": "review",
+        "title": "Fang, Chaosi",
+        "eid": "547706",
+        "meetingRoomId": 83
+    },
+    {
+        "uid": "102827",
+        "begins": "2014-05-28 14:00:00",
+        "ends": "2014-05-28 15:00:00",
+        "resource": 45,
+        "notes": null,
+        "title": "Tong, Xinhui",
+        "eid": "495291",
+        "meetingRoomId": 52
+    },
+    {
+        "uid": "102837",
+        "begins": "2014-05-28 15:00:00",
+        "ends": "2014-05-28 17:00:00",
+        "resource": 38,
+        "notes": "SSgA English Class",
+        "title": "Jin, Hao",
+        "eid": "519013",
+        "meetingRoomId": 83
+    },
+    {
+        "uid": "102841",
+        "begins": "2014-05-28 15:00:00",
+        "ends": "2014-05-28 16:30:00",
+        "resource": 39,
+        "notes": "SSgA English Class",
+        "title": "Jin, Hao",
+        "eid": "519013",
+        "meetingRoomId": 84
+    }
+
+]

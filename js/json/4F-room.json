@@ -1,0 +1,16 @@
+{
+    "resource": {
+        "93": "Tai Shan 泰山",
+        "94": "Shangri-La香格里拉",
+        "97": "Huang Shan 黄山",
+        "98": "Qomolangma珠穆朗玛",
+        "100": "Long Jing 龙井"
+    },
+    "meetingRoomId": [
+        77,
+        78,
+        75,
+        76,
+        79
+    ]
+}

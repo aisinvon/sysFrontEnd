@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Billing PM</title>
+	<link rel="stylesheet" type="text/css" href="./css/base.css" />
+	<link rel="stylesheet" type="text/css" href="./css/pris.css" />
+    <!-- jQuery ui-->
+    <link rel="stylesheet" type="text/css" href="./css/plugins/jquery-ui/jquery.ui.min.css" />
+</head>
+<body>
+<div class="pageWrapper">
+	<!-- top -->
+	<div class="top clearfix">
+		<div class="wrap">
+			<a class="logo" href=""><img src="./images/logo.png" alt="Company" /></a>
+			<img class="slogan" src="./images/slogan.png" alt="Company Hangzhou: Project Resource Information System (PRIS)" />		
+		</div>
+	</div>
+	<!-- / top -->
+	
+	<!-- nav -->
+	<div class="nav">
+		<div class="wrap">
+			<ul class="clearfix">
+				<!-- add class on, then that nav will be highlighted -->
+				<li><a href="./">Homepage</a></li>
+				<li>
+					<a href="javascript:;">My Staff</a>
+					<!-- second level menu -->
+					<ul>
+						<li>
+							<a href="mystaff_bpo.html">BPO</a>
+						</li>
+						<li>
+							<a href="mystaff_ito.html">ITO</a>
+						</li>
+					</ul>
+					<!-- / second level menu -->
+				</li>
+				<li>
+				    <a href="javascript:;">My Project</a>
+                    <!-- second level menu -->
+					<ul>
+						<li>
+							<a href="myproject_bpo.html">BPO</a>
+						</li>
+						<li>
+							<a href="myproject_ito.html">ITO</a>
+						</li>
+					</ul>
+					<!-- / second level menu -->
+				</li>
+				<li class="on">
+					<a href="javascript:;">Operation Service</a>
+					<!-- second level menu -->
+					<ul>
+						<li>
+							<a href="javascript:;">Billing<i></i></a>
+							<!-- third level menu -->
+							<ul>
+								<li>
+									<a href="billing_tl.html">Team Leader</a>
+								</li>
+								<li>
+									<a href="billing_pm.html">PM</a>
+								</li>
+								<li>
+									<a href="billing_pmo.html">PMO</a>
+								</li>
+							</ul>
+							<!-- / third level menu -->
+						</li>
+						<li>
+							<a href="javascript:;">Invoice</a>
+						</li>
+					</ul>
+					<!-- / second level menu -->
+				</li>
+				<li>
+                    <a href="javascript:;">Report Center</a>
+                    <!-- second level menu -->
+					<ul>
+						<li>
+							<a href="javascript:;">Executive Dashboard/Report</a>
+						</li>
+						<li>
+							<a href="javascript:;">Operational Report</a>
+						</li>
+						<li>
+							<a href="javascript:;">Atrack Customized report<i></i></a>
+							<!-- third level menu -->
+							<ul>
+								<li>
+									<a href="structure_report_01_chart.html">Structure Report</a>
+								</li>
+								<li>
+									<a href="javascript:;">Atrack Report</a>
+								</li>
+							</ul>
+							<!-- / third level menu -->
+						</li>
+						<li>
+							<a href="javascript:;">Other</a>
+						</li>
+					</ul>
+					<!-- / second level menu -->
+                </li>
+			</ul>
+		</div>
+	</div>
+	<!-- / nav -->
+	
+	<!-- main content -->
+	<div class="main wrap">
+	
+		<h3 class="pg_tit">Billing</h3>
+		
+		<div class="mod_white">
+			<h4>Reminder: Standard Effective Working Hours in This Month is <b class="yelw_txt">176</b> Hours.</h4>
+			<div class="mod_input clearfix">
+			    <div class="item">
+                    <label class="label" for="manager">Manager:</label>
+                    <input id="manager" class="text" type="text" tip="enter text" />
+                </div>
+                <div class="item">
+                    <label class="label" for="name">Name:</label>
+                    <input id="name" class="text" type="text" tip="enter text" />
+                </div>
+                <div class="item">
+                    <label class="label" for="c_center">Cost Center:</label>
+                    <input id="c_center" class="text" type="text" tip="enter text" />
+                </div>
+                <div class="item">
+                    <label class="label" for="only_month">Month:</label>
+                    <input type="text" id="only_month" name="only_month" class="text only_month" />
+                </div>
+                <div class="item">
+                    <label class="label" for="project">Project:</label>
+                    <input id="project" class="text" type="text" tip="enter text" />
+                </div>
+                <div class="item">
+                    <label class="label" for="team">Team:</label>
+                    <input id="team" class="text" type="text" tip="enter text" />
+                </div>
+                <div class="item">
+                    <label class="label" for="s_cate">Service Category:</label>
+                    <select id="" name="">
+                        <option value="A1J">A1J</option>
+                        <option value="A2J">A2J</option>
+                        <option value="A3J">A3J</option>
+                        <option value="A4J">A4J</option>
+                        <option value="A5J">A5J</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label class="label">&nbsp;</label>
+                    <button type="button" class="search_btn auto_btn prim"><span>Search</span></button>
+                </div>
+			</div>
+		</div>
+		
+		<!-- table -->
+		<table id="billing_table" class="data_table">
+			<thead>
+				<tr>
+				<!-- if need to be sorted, add customer property 'dataType' -->
+					<!-- if the column need to be sorted, then should add property 'data-type' -->
+					<th data-type="text" class="descend w65">Resource Category</th>
+					<th data-type="text" class="ascend w120">Manager</th>
+					<th data-type="text" class="w120">Name/ID</th>
+					<th data-type="int" class="w60">Cost Center</th>
+					<th data-type="text" class="w100">Project</th>
+					<th data-type="text" class="w100">Team</th>
+                    <th data-type="int" class="w100">Billable Hours</th>
+					<th data-type="int" class="w100">Atrack Hours</th>
+					<th data-type="text" class="w60">Service Category</th>
+					<th class="last">Operation</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- add class 'disabled' if this row can't be modified. -->
+                <!-- add class 'editable' if this row can be modified. -->
+				<tr>
+					<td>HT</td>
+					<td>Wsdang,Honsdgbin</td>
+					<td>Zhasdfng,lishesdfng</td>
+					<td>1339117</td>
+					<td>NGA</td>
+					<td>Compliance</td>
+					<td>176</td>
+					<td>175</td>
+					<td>DEV</td>
+					<td>
+					    <div class="td_action">
+					        <button data-title="no_tit_tip" title="reject" class="reject binIco" type="button"><i></i></button>
+					        <div class="reject_text">
+					            <h5>Rejected Reason</h5>
+					            <textarea name="" id="" tip="Enter rejected reason."></textarea>
+					            <button class="auto_c_btn prim sbmt" type="button">Ok</button>
+					            <button class="auto_c_btn cancel" type="button">Cancel</button>
+					            <i class="tdUpIco"></i>
+					        </div>
+					    </div>
+                    </td>
+				</tr>
+				<tr>
+					<td>SS</td>
+					<td>Asdfang,Hosdfngbin</td>
+					<td>Chsdfang,lisdfsheng</td>
+					<td>134439117</td>
+					<td>OGA</td>
+					<td>Dompliance</td>
+					<td>76</td>
+					<td>95</td>
+					<td>AEV</td>
+					<td>
+					    <div class="td_action">
+					        <button data-title="no_tit_tip" title="reject" class="reject binIco" type="button"><i></i></button>
+					        <div class="reject_text">
+					            <h5>Rejected Reason</h5>
+					            <textarea name="" id="" tip="Enter rejected reason."></textarea>
+					            <button class="auto_c_btn prim sbmt" type="button">Ok</button>
+					            <button class="auto_c_btn cancel" type="button">Cancel</button>
+					            <i class="tdUpIco"></i>
+					        </div>
+					    </div>
+                    </td>
+				</tr>
+				<tr>
+					<td>DF</td>
+					<td>Wasdfng,Honsdfgbin</td>
+					<td>Zhsdfang,lissdfheng</td>
+					<td>1339117</td>
+					<td>NGA</td>
+					<td>Compliance</td>
+					<td>176</td>
+					<td>175</td>
+					<td>DEV</td>
+					<td>
+					    <div class="td_action">
+					        <button data-title="no_tit_tip" title="reject" class="reject binIco" type="button"><i></i></button>
+					        <div class="reject_text">
+					            <h5>Rejected Reason</h5>
+					            <textarea name="" id="" tip="Enter rejected reason."></textarea>
+					            <button class="auto_c_btn prim sbmt" type="button">Ok</button>
+					            <button class="auto_c_btn cancel" type="button">Cancel</button>
+					            <i class="tdUpIco"></i>
+					        </div>
+					    </div>
+                    </td>
+				</tr>
+				<tr>
+					<td>AHAT</td>
+					<td>Asdfang,Hosdngbin</td>
+					<td>Chsdfang,lisdsheng</td>
+					<td>134439117</td>
+					<td>OGA</td>
+					<td>Dompliance</td>
+					<td>76</td>
+					<td>95</td>
+					<td>AEV</td>
+					<td>
+					    <div class="td_action">
+					        <button data-title="no_tit_tip" title="reject" class="reject binIco" type="button"><i></i></button>
+					        <div class="reject_text">
+					            <h5>Rejected Reason</h5>
+					            <textarea name="" id="" tip="Enter rejected reason."></textarea>
+					            <button class="auto_c_btn prim sbmt" type="button">Ok</button>
+					            <button class="auto_c_btn cancel" type="button">Cancel</button>
+					            <i class="tdUpIco"></i>
+					        </div>
+					    </div>
+                    </td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- / table -->
+				
+	</div>
+	<!-- / main content -->
+	
+	<!-- footer -->
+	<div class="footer clearfix">
+		<div class="wrap">
+            <a href="homepage.html" class="logo">Company</a>
+            <ul>
+                <li><a href="">SSTC</a></li>
+                <li><a href="">Atrack</a></li>
+                <li><a href="">SSHOME</a></li>
+                <li><a href="">LMS</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="">eBusiness</a></li>
+            </ul>
+		</div>
+	</div>
+	<!-- / footer -->
+	
+	<!-- fixed elements -->
+	<div class="fixed">
+		<a title="Go to top" class="btn to_top" href="javascript:;">Go to top</a>
+	</div>
+	<!-- / fixed elements -->
+	
+	<script type="text/javascript" src="./js/jQuery.1.7.2.min.js"></script>
+	<script type="text/javascript" src="./js/pris.js"></script>
+    <!-- jquery monthpicker -->
+	<script type="text/javascript" src="./js/plugins/jquery.mtz.monthpicker/jquery.mtz.monthpicker.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			fedPris.billing();
+		});
+	</script>
+</div>
+</body>
+</html>

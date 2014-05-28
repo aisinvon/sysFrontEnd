@@ -1,0 +1,27 @@
+@charset "utf-8";
+/*css reset*/
+body,p,form,input,button,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6{margin:0;padding:0;list-style:none;}
+body,button,input,select,textarea{font:12px Arial, Helvetica, sans-serif;color:#4B4B4B;}
+input,select,textarea{font-size:100%;}
+a{text-decoration:none;color:#4B4B4B;}
+a:hover{text-decoration:underline;color:#1d4076;}
+.clearfix:after{display:block;content:".";height:0;visibility:hidden;clear:both;font-size:0;line-height:0;}
+.clearfix{*zoom:1;}
+img{border:none;vertical-align:top;}
+em{font-style:normal;}
+button::-moz-focus-inner{padding:0;border:none;}
+/*common css*/
+.wrap{width:940px; margin:0 auto;}
+.w1200 .wrap{width:1200px;}
+.fl{float:left;}
+.fr{float:right;}
+.mt{margin-top:10px;}
+.ml{margin-left:10px;}
+.mt5{margin-top:5px;}
+.mt10{margin-top:10px;}
+.mb{margin-bottom:10px;}
+.none{display:none;}
+.hidden{visibility:hidden;}
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}

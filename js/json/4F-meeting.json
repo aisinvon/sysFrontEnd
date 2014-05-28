@@ -1,0 +1,112 @@
+[
+    {
+        "uid": "100311",
+        "begins": "2014-05-28 17:00:00",
+        "ends": "2014-05-28 17:30:00",
+        "resource": 100,
+        "notes": "Lev call with Kiev.",
+        "title": "Pynchon, Henry",
+        "eid": "512889",
+        "meetingRoomId": 79
+    },
+    {
+        "uid": "100313",
+        "begins": "2014-05-28 15:30:00",
+        "ends": "2014-05-28 17:00:00",
+        "resource": 100,
+        "notes": "Training with HZ BT's and Lev. ",
+        "title": "Pynchon, Henry",
+        "eid": "512889",
+        "meetingRoomId": 79
+    },
+    {
+        "uid": "102283",
+        "begins": "2014-05-28 13:00:00",
+        "ends": "2014-05-28 17:30:00",
+        "resource": 97,
+        "notes": null,
+        "title": "Zhao, Jiasu",
+        "eid": "533421",
+        "meetingRoomId": 75
+    },
+    {
+        "uid": "102318",
+        "begins": "2014-05-28 16:00:00",
+        "ends": "2014-05-28 17:30:00",
+        "resource": 93,
+        "notes": null,
+        "title": "Harianto, Roby",
+        "eid": "515780",
+        "meetingRoomId": 77
+    },
+    {
+        "uid": "102676",
+        "begins": "2014-05-28 16:00:00",
+        "ends": "2014-05-28 17:30:00",
+        "resource": 94,
+        "notes": null,
+        "title": "Hong, Manhui",
+        "eid": "526623",
+        "meetingRoomId": 78
+    },
+    {
+        "uid": "102713",
+        "begins": "2014-05-28 09:30:00",
+        "ends": "2014-05-28 10:00:00",
+        "resource": 100,
+        "notes": "patheon",
+        "title": "Wu, Linglin",
+        "eid": "550363",
+        "meetingRoomId": 79
+    },
+    {
+        "uid": "102765",
+        "begins": "2014-05-28 12:00:00",
+        "ends": "2014-05-28 13:00:00",
+        "resource": 97,
+        "notes": null,
+        "title": "Lv, Jiang",
+        "eid": "535525",
+        "meetingRoomId": 75
+    },
+    {
+        "uid": "102773",
+        "begins": "2014-05-28 12:00:00",
+        "ends": "2014-05-28 13:00:00",
+        "resource": 100,
+        "notes": null,
+        "title": "Wu, Zuoxia",
+        "eid": "551473",
+        "meetingRoomId": 79
+    },
+    {
+        "uid": "102774",
+        "begins": "2014-05-28 14:00:00",
+        "ends": "2014-05-28 14:30:00",
+        "resource": 93,
+        "notes": null,
+        "title": "Yang, Jiali",
+        "eid": "506661",
+        "meetingRoomId": 77
+    },
+    {
+        "uid": "102775",
+        "begins": "2014-05-28 14:30:00",
+        "ends": "2014-05-28 15:00:00",
+        "resource": 93,
+        "notes": null,
+        "title": "Yang, Jiali",
+        "eid": "506661",
+        "meetingRoomId": 77
+    },
+    {
+        "uid": "102779",
+        "begins": "2014-05-28 13:00:00",
+        "ends": "2014-05-28 15:30:00",
+        "resource": 100,
+        "notes": null,
+        "title": "Luo, Liqin",
+        "eid": "526622",
+        "meetingRoomId": 79
+    }
+]

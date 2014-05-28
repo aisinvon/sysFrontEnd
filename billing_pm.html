@@ -1,0 +1,943 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Billing PM</title>
+	<link rel="stylesheet" type="text/css" href="./css/base.css" />
+	<link rel="stylesheet" type="text/css" href="./css/pris.css" />
+    <!-- jQuery ui-->
+    <link rel="stylesheet" type="text/css" href="./css/plugins/jquery-ui/jquery.ui.min.css" />
+</head>
+<body>
+<div class="pageWrapper">
+	<!-- top -->
+	<div class="top clearfix">
+		<div class="wrap">
+			<a class="logo" href=""><img src="./images/logo.png" alt="Company" /></a>
+			<img class="slogan" src="./images/slogan.png" alt="Company Hangzhou: Project Resource Information System (PRIS)" />		
+		</div>
+	</div>
+	<!-- / top -->
+	
+	<!-- nav -->
+	<div class="nav">
+		<div class="wrap">
+			<ul class="clearfix">
+				<!-- add class on, then that nav will be highlighted -->
+				<li><a href="./">Homepage</a></li>
+				<li>
+					<a href="javascript:;">My Staff</a>
+					<!-- second level menu -->
+					<ul>
+						<li>
+							<a href="mystaff_bpo.html">BPO</a>
+						</li>
+						<li>
+							<a href="mystaff_ito.html">ITO</a>
+						</li>
+					</ul>
+					<!-- / second level menu -->
+				</li>
+				<li>
+				    <a href="javascript:;">My Project</a>
+                    <!-- second level menu -->
+					<ul>
+						<li>
+							<a href="myproject_bpo.html">BPO</a>
+						</li>
+						<li>
+							<a href="myproject_ito.html">ITO</a>
+						</li>
+					</ul>
+					<!-- / second level menu -->
+				</li>
+				<li class="on">
+					<a href="javascript:;">Operation Service</a>
+					<!-- second level menu -->
+					<ul>
+						<li>
+							<a href="javascript:;">Billing<i></i></a>
+							<!-- third level menu -->
+							<ul>
+								<li>
+									<a href="billing_tl.html">Team Leader</a>
+								</li>
+								<li>
+									<a href="billing_pm.html">PM</a>
+								</li>
+								<li>
+									<a href="billing_pmo.html">PMO</a>
+								</li>
+							</ul>
+							<!-- / third level menu -->
+						</li>
+						<li>
+							<a href="javascript:;">Invoice</a>
+						</li>
+					</ul>
+					<!-- / second level menu -->
+				</li>
+				<li>
+                    <a href="javascript:;">Report Center</a>
+                    <!-- second level menu -->
+					<ul>
+						<li>
+							<a href="javascript:;">Executive Dashboard/Report</a>
+						</li>
+						<li>
+							<a href="javascript:;">Operational Report</a>
+						</li>
+						<li>
+							<a href="javascript:;">Atrack Customized report<i></i></a>
+							<!-- third level menu -->
+							<ul>
+								<li>
+									<a href="structure_report_01_chart.html">Structure Report</a>
+								</li>
+								<li>
+									<a href="javascript:;">Atrack Report</a>
+								</li>
+							</ul>
+							<!-- / third level menu -->
+						</li>
+						<li>
+							<a href="javascript:;">Other</a>
+						</li>
+					</ul>
+					<!-- / second level menu -->
+                </li>
+			</ul>
+		</div>
+	</div>
+	<!-- / nav -->
+	
+	<!-- main content -->
+	<div class="main wrap">
+	
+		<h3 class="pg_tit">Billing</h3>
+		
+		<div class="mod_white">
+			<h4>Reminder: Standard Effective Working Hours in This Month is <b class="yelw_txt">176</b> Hours.</h4>
+			<button type="button" class="black_btn fr billFilter_btn">Search</button>
+			Project:
+			<select name="" id="">
+				<option value="A1J">A1J</option>
+				<option value="A2J">A2J</option>
+				<option value="A3J">A3J</option>
+				<option value="A4J">A4J</option>
+				<option value="A5J">A5J</option>
+			</select>
+			<label for="only_month">Month: </label>
+            <input type="text" id="only_month" name="only_month" class="text only_month" />
+		</div>
+		
+		<!-- top of table -->
+		<div class="table_tit clearfix">
+			<div class="table_tit_r">
+				<button class="black_btn" type="button">Submit</button>
+			</div>
+			<strong>To be Submitted:<span class="num_toBeSbmt">1</span></strong>
+		</div>
+		<!-- / top of table -->
+		
+		<!-- table -->
+		<table id="billing_table" class="data_table">
+			<thead>
+				<tr>
+				<!-- if need to be sorted, add customer property 'dataType' -->
+					<th class="select_all w30">
+						<input type="checkbox" />
+					</th>
+					<!-- if the column need to be sorted, then should add property 'data-type' -->
+					<th data-type="text" class="w65">Resource Category</th>
+					<th data-type="text" class="w100">Name/ID</th>
+					<th data-type="text" class="w60">Created By</th>
+					<th data-type="int" class="w60">Cost Center</th>
+					<th data-type="text" class="w100">Project</th>
+					<th data-type="int" class="w45">Billable Hours</th>
+					<th data-type="float" class="w50">Atrack Hours</th>
+					<th data-type="text" class="w100">Tasks</th>
+					<th data-type="text" class="w60">Service Category</th>
+					<th data-type="text" class="w45">
+						<div class="status">
+							Status<i class="jsTipIco QIco"></i>
+							<div class="jsTip tip">
+								<table>
+								    <tbody>
+								        <tr>
+								            <td><span><i class="dotIco blue"></i>New</span></td>
+								            <td>the infor about "new" status...</td>
+								        </tr>
+								        <tr>
+								            <td><span><i class="dotIco green"></i>pending approval</span></td>
+								            <td>the infor about "pending" status...</td>
+								        </tr>
+								        <tr>
+								            <td><span><i class="dotIco yellow"></i>rejected</span></td>
+								            <td>the infor about "rejected" status...</td>
+								        </tr>
+								        <tr>
+								            <td><span><i class="dotIco pink"></i>finished</span></td>
+								            <td>the infor about "finished" status...</td>
+								        </tr>
+								    </tbody>
+								</table>
+								<i></i>
+							</div>
+						</div>
+					</th>
+					<th class="last">Operation</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- add class 'disabled' if this row can't be modified. -->
+                <!-- add class 'editable' if this row can be modified. -->
+				<tr class="editable">
+					<td class="check_btn">
+						<input type="checkbox" />
+					</td>
+					<td>HT</td>
+					<td>cLi,Hong/pAC798</td>
+					<td>HongZi, Li</td>
+					<td>
+						<select name="" id="">
+							<option value="1339092">1339092</option>
+							<option value="2339093">2339093</option>
+							<option value="3339094">3339094</option>
+							<option value="4339095">4339095</option>
+						</select>
+					</td>
+					<td>D2J</td>
+					<td>
+						<input class="text" type="text" value="999" />
+					</td>
+					<td>176</td>
+					<td>
+						<input class="text" type="text" value="developing" />
+					</td>
+					<td>
+						<select name="" id="">
+							<option value="DEV">DEV</option>
+							<option value="DEV2">DEV2</option>
+							<option value="DE3">DE3</option>
+							<option value="DEV4">DEV4</option>
+							<option value="DEV4">DEV4</option>
+						</select>
+					</td>
+					<td>
+						<div class="td_status">
+							<i class="dotIco green"></i>pending approval
+						</div>
+					</td>
+					<td>
+					    <div class="td_action">
+					        <button data-title="no_tit_tip" title="reject" class="reject binIco" type="button"><i></i></button>
+					        <div class="reject_text">
+					            <h5>Rejected Reason</h5>
+					            <textarea name="" id="" tip="Enter rejected reason."></textarea>
+					            <button class="auto_c_btn prim sbmt" type="button">Ok</button>
+					            <button class="auto_c_btn cancel" type="button">Cancel</button>
+					            <i class="tdUpIco"></i>
+					        </div>
+					    </div>
+					</td>
+				</tr>
+				<tr class="editable">
+					<td class="check_btn">
+						<input type="checkbox" />
+					</td>
+					<td>HT</td>
+					<td>cLi,Hong/pAC798</td>
+					<td>HongZi, Li</td>
+					<td>
+						<select name="" id="">
+							<option value="1339092">1339092</option>
+							<option value="2339093">2339093</option>
+							<option value="3339094">3339094</option>
+							<option value="4339095">4339095</option>
+						</select>
+					</td>
+					<td>D2J</td>
+					<td>
+						<input class="text" type="text" value="999" />
+					</td>
+					<td>176</td>
+					<td>
+						<input class="text" type="text" value="developing" />
+					</td>
+					<td>
+						<select name="" id="">
+							<option value="DEV">DEV</option>
+							<option value="DEV2">DEV2</option>
+							<option value="DE3">DE3</option>
+							<option value="DEV4">DEV4</option>
+							<option value="DEV4">DEV4</option>
+						</select>
+					</td>
+					<td>
+						<div class="td_status">
+							<i class="dotIco yellow"></i>
+							<ins class="jsTipIco">rejected</ins>
+							<!-- reject reason -->
+							<span class="jsTip rej_reason">reject reason, why reject reject reason, why rejectreject reason, why rejectreject reason, why rejectreject reason, why reject<i></i></span>
+						</div>
+					</td>
+					<td>
+					    <div class="td_action">
+					        <button data-title="no_tit_tip" title="reject" class="reject binIco" type="button"><i></i></button>
+					        <div class="reject_text">
+					            <h5>Rejected Reason</h5>
+					            <textarea name="" id="" tip="Enter rejected reason."></textarea>
+					            <button class="auto_c_btn prim sbmt" type="button">Ok</button>
+					            <button class="auto_c_btn cancel" type="button">Cancel</button>
+					            <i class="tdUpIco"></i>
+					        </div>
+					    </div>
+                    </td>
+				</tr>
+				<tr class="disabled">
+					<td class="check_btn">
+						<input type="checkbox" disabled="disabled" />
+					</td>
+					<td>ZT</td>
+					<td>SLi,Hong/pAC798</td>
+					<td>HongZi, Li</td>
+					<td>1339092</td>
+					<td>A2J</td>
+					<td>176</td>
+					<td>136</td>
+					<td>veam discussion</td>
+					<td>DEV</td>
+					<td>
+						<div class="td_status">
+							<i class="dotIco pink"></i>finished
+						</div>
+					</td>
+					<td>
+					    <div class="td_action">
+					        <button data-title="no_tit_tip" title="delete" class="del binIco" type="button"><i></i></button>
+                        </div>
+                    </td>
+				</tr>
+				<tr class="disabled">
+					<td class="check_btn">
+						<input type="checkbox" disabled="disabled" />
+					</td>
+					<td>ZT</td>
+					<td>SLi,Hong/pAC798</td>
+					<td>HongZi, Li</td>
+					<td>1339092</td>
+					<td>A2J</td>
+					<td>1676</td>
+					<td>1136</td>
+					<td>veam discussion</td>
+					<td>DEV</td>
+					<td>
+						<div class="td_status">
+							<i class="dotIco pink"></i>finished
+						</div>
+					</td>
+					<td>
+					    <div class="td_action">
+					        <button data-title="no_tit_tip" title="delete" class="del binIco" type="button"><i></i></button>
+                        </div>
+                    </td>
+				</tr>
+				<tr class="editable">
+					<td class="check_btn">
+						<input type="checkbox" />
+					</td>
+					<td>HT</td>
+					<td>cLi,Hong/pAC798</td>
+					<td>HongZi, Li</td>
+					<td>
+						<select name="" id="">
+							<option value="1339092">1339092</option>
+							<option value="2339093">2339093</option>
+							<option value="3339094">3339094</option>
+							<option value="4339095">4339095</option>
+						</select>
+					</td>
+					<td>D2J</td>
+					<td>
+						<input class="text" type="text" value="999" />
+					</td>
+					<td>176</td>
+					<td>
+						<input class="text" type="text" value="developing" />
+					</td>
+					<td>
+						<select name="" id="">
+							<option value="DEV">DEV</option>
+							<option value="DEV2">DEV2</option>
+							<option value="DE3">DE3</option>
+							<option value="DEV4">DEV4</option>
+							<option value="DEV4">DEV4</option>
+						</select>
+					</td>
+					<td>
+						<div class="td_status">
+							<i class="dotIco green"></i>pending approval
+						</div>
+					</td>
+					<td>
+					    <div class="td_action">
+					        <button data-title="no_tit_tip" title="reject" class="reject binIco" type="button"><i></i></button>
+					        <div class="reject_text">
+					            <h5>Rejected Reason</h5>
+					            <textarea name="" id="" tip="Enter rejected reason."></textarea>
+					            <button class="auto_c_btn prim sbmt" type="button">Ok</button>
+					            <button class="auto_c_btn cancel" type="button">Cancel</button>
+					            <i class="tdUpIco"></i>
+					        </div>
+					    </div>
+					</td>
+				</tr>
+				<!-- add class 'editable' if this row can be modified. -->
+				<tr class="editable">
+					<td class="check_btn">
+						<input type="checkbox" />
+					</td>
+					<td>HT</td>
+					<td>cLi,Hong/pAC798</td>
+					<td>HongZi, Li</td>
+					<td>
+						<select name="" id="">
+							<option value="1339092">1339092</option>
+							<option value="2339093">2339093</option>
+							<option value="3339094">3339094</option>
+							<option value="4339095">4339095</option>
+						</select>
+					</td>
+					<td>D2J</td>
+					<td>
+						<input class="text" type="text" value="999" />
+					</td>
+					<td>176</td>
+					<td>
+						<input class="text" type="text" value="developing" />
+					</td>
+					<td>
+						<select name="" id="">
+							<option value="DEV">DEV</option>
+							<option value="DEV2">DEV2</option>
+							<option value="DE3">DE3</option>
+							<option value="DEV4">DEV4</option>
+							<option value="DEV4">DEV4</option>
+						</select>
+					</td>
+					<td>
+						<div class="td_status">
+							<i class="dotIco blue"></i>new
+						</div>
+					</td>
+					<td>
+					    <div class="td_action">
+					        <button data-title="no_tit_tip" title="delete" class="del binIco" type="button"><i></i></button>
+                        </div>
+                    </td>
+				</tr>
+				<tr class="disabled editable">
+					<td class="check_btn">
+						<input type="checkbox" disabled="disabled" />
+					</td>
+					<td>HT</td>
+					<td>LLi,Hong/pAC798</td>
+					<td>HongZi, Li</td>
+					<td>
+						<select name="" id="">
+							<option value="1339092">1339092</option>
+							<option value="2339093">2339093</option>
+							<option value="3339094">3339094</option>
+							<option value="4339095">4339095</option>
+						</select>
+					</td>
+					<td>O2J</td>
+					<td>
+						<input class="text" type="text" tip="" />
+					</td>
+					<td>1</td>
+					<td>
+						<input class="text" type="text" tip="" />
+					</td>
+					<td>
+						<select name="" id="">
+							<option value="DEV">DEV</option>
+							<option value="DEV2">DEV2</option>
+							<option value="DE3">DE3</option>
+							<option value="DEV4">DEV4</option>
+						</select>
+					</td>
+					<td>
+						<div class="td_status">
+							<i class="dotIco blue"></i>new
+						</div>
+					</td>
+					<td>
+                        <div class="td_action">    
+                            <button data-title="no_tit_tip" title="delete" class="del binIco" type="button"><i></i></button>
+                        </div>
+                    </td>
+				</tr>
+				<tr class="editable">
+					<td class="check_btn">
+						<input type="checkbox" />
+					</td>
+					<td>HT</td>
+					<td>cLi,Hong/pAC798</td>
+					<td>HongZi, Li</td>
+					<td>
+						<select name="" id="">
+							<option value="1339092">1339092</option>
+							<option value="2339093">2339093</option>
+							<option value="3339094">3339094</option>
+							<option value="4339095">4339095</option>
+						</select>
+					</td>
+					<td>D2J</td>
+					<td>
+						<input class="text" type="text" value="999" />
+					</td>
+					<td>176</td>
+					<td>
+						<input class="text" type="text" value="developing" />
+					</td>
+					<td>
+						<select name="" id="">
+							<option value="DEV">DEV</option>
+							<option value="DEV2">DEV2</option>
+							<option value="DE3">DE3</option>
+							<option value="DEV4">DEV4</option>
+							<option value="DEV4">DEV4</option>
+						</select>
+					</td>
+					<td>
+						<div class="td_status">
+							<i class="dotIco green"></i>pending approval
+						</div>
+					</td>
+					<td>
+					    <div class="td_action">
+					        <button data-title="no_tit_tip" title="reject" class="reject binIco" type="button"><i></i></button>
+					        <div class="reject_text">
+					            <h5>Rejected Reason</h5>
+					            <textarea name="" id="" tip="Enter rejected reason."></textarea>
+					            <button class="auto_c_btn prim sbmt" type="button">Ok</button>
+					            <button class="auto_c_btn cancel" type="button">Cancel</button>
+					            <i class="tdUpIco"></i>
+					        </div>
+					    </div>
+					</td>
+				</tr>
+				<tr class="editable">
+					<td class="check_btn">
+						<input type="checkbox" />
+					</td>
+					<td>HT</td>
+					<td>cLi,Hong/pAC798</td>
+					<td>HongZi, Li</td>
+					<td>
+						<select name="" id="">
+							<option value="1339092">1339092</option>
+							<option value="2339093">2339093</option>
+							<option value="3339094">3339094</option>
+							<option value="4339095">4339095</option>
+						</select>
+					</td>
+					<td>D2J</td>
+					<td>
+						<input class="text" type="text" value="999" />
+					</td>
+					<td>176</td>
+					<td>
+						<input class="text" type="text" value="developing" />
+					</td>
+					<td>
+						<select name="" id="">
+							<option value="DEV">DEV</option>
+							<option value="DEV2">DEV2</option>
+							<option value="DE3">DE3</option>
+							<option value="DEV4">DEV4</option>
+							<option value="DEV4">DEV4</option>
+						</select>
+					</td>
+					<td>
+						<div class="td_status">
+							<i class="dotIco yellow"></i>
+							<ins class="jsTipIco">rejected</ins>
+							<!-- reject reason -->
+							<span class="jsTip rej_reason">reject reason, why reject reject reason, why rejectreject reason, why rejectreject reason, why rejectreject reason, why reject<i></i></span>
+						</div>
+					</td>
+					<td>
+					    <div class="td_action">
+					        <button data-title="no_tit_tip" title="reject" class="reject binIco" type="button"><i></i></button>
+					        <div class="reject_text">
+					            <h5>Rejected Reason</h5>
+					            <textarea name="" id="" tip="Enter rejected reason."></textarea>
+					            <button class="auto_c_btn prim sbmt" type="button">Ok</button>
+					            <button class="auto_c_btn cancel" type="button">Cancel</button>
+					            <i class="tdUpIco"></i>
+					        </div>
+					    </div>
+                    </td>
+				</tr>
+				<tr class="disabled">
+					<td class="check_btn">
+						<input type="checkbox" disabled="disabled" />
+					</td>
+					<td>ZT</td>
+					<td>SLi,Hong/pAC798</td>
+					<td>HongZi, Li</td>
+					<td>1339092</td>
+					<td>A2J</td>
+					<td>176</td>
+					<td>136</td>
+					<td>veam discussion</td>
+					<td>DEV</td>
+					<td>
+						<div class="td_status">
+							<i class="dotIco pink"></i>finished
+						</div>
+					</td>
+					<td>
+					    <div class="td_action">
+					        <button data-title="no_tit_tip" title="delete" class="del binIco" type="button"><i></i></button>
+                        </div>
+                    </td>
+				</tr>
+				<tr class="disabled">
+					<td class="check_btn">
+						<input type="checkbox" disabled="disabled" />
+					</td>
+					<td>ZT</td>
+					<td>SLi,Hong/pAC798</td>
+					<td>HongZi, Li</td>
+					<td>1339092</td>
+					<td>A2J</td>
+					<td>1676</td>
+					<td>1136</td>
+					<td>veam discussion</td>
+					<td>DEV</td>
+					<td>
+						<div class="td_status">
+							<i class="dotIco pink"></i>finished
+						</div>
+					</td>
+					<td>
+					    <div class="td_action">
+					        <button data-title="no_tit_tip" title="delete" class="del binIco" type="button"><i></i></button>
+                        </div>
+                    </td>
+				</tr>
+				<tr class="editable">
+					<td class="check_btn">
+						<input type="checkbox" />
+					</td>
+					<td>HT</td>
+					<td>cLi,Hong/pAC798</td>
+					<td>HongZi, Li</td>
+					<td>
+						<select name="" id="">
+							<option value="1339092">1339092</option>
+							<option value="2339093">2339093</option>
+							<option value="3339094">3339094</option>
+							<option value="4339095">4339095</option>
+						</select>
+					</td>
+					<td>D2J</td>
+					<td>
+						<input class="text" type="text" value="999" />
+					</td>
+					<td>176</td>
+					<td>
+						<input class="text" type="text" value="developing" />
+					</td>
+					<td>
+						<select name="" id="">
+							<option value="DEV">DEV</option>
+							<option value="DEV2">DEV2</option>
+							<option value="DE3">DE3</option>
+							<option value="DEV4">DEV4</option>
+							<option value="DEV4">DEV4</option>
+						</select>
+					</td>
+					<td>
+						<div class="td_status">
+							<i class="dotIco green"></i>pending approval
+						</div>
+					</td>
+					<td>
+					    <div class="td_action">
+					        <button data-title="no_tit_tip" title="reject" class="reject binIco" type="button"><i></i></button>
+					        <div class="reject_text">
+					            <h5>Rejected Reason</h5>
+					            <textarea name="" id="" tip="Enter rejected reason."></textarea>
+					            <button class="auto_c_btn prim sbmt" type="button">Ok</button>
+					            <button class="auto_c_btn cancel" type="button">Cancel</button>
+					            <i class="tdUpIco"></i>
+					        </div>
+					    </div>
+					</td>
+				</tr>
+				<!-- add class 'editable' if this row can be modified. -->
+				<tr class="editable">
+					<td class="check_btn">
+						<input type="checkbox" />
+					</td>
+					<td>HT</td>
+					<td>cLi,Hong/pAC798</td>
+					<td>HongZi, Li</td>
+					<td>
+						<select name="" id="">
+							<option value="1339092">1339092</option>
+							<option value="2339093">2339093</option>
+							<option value="3339094">3339094</option>
+							<option value="4339095">4339095</option>
+						</select>
+					</td>
+					<td>D2J</td>
+					<td>
+						<input class="text" type="text" value="999x" tip="999x" />
+					</td>
+					<td>176</td>
+					<td>
+						<input class="text" type="text" value="developing" />
+					</td>
+					<td>
+						<select name="" id="">
+							<option value="DEV">DEV</option>
+							<option value="DEV2">DEV2</option>
+							<option value="DE3">DE3</option>
+							<option value="DEV4">DEV4</option>
+							<option value="DEV4">DEV4</option>
+						</select>
+					</td>
+					<td>
+						<div class="td_status">
+							<i class="dotIco blue"></i>new
+						</div>
+					</td>
+					<td>
+					    <div class="td_action">
+					        <button data-title="no_tit_tip" title="delete" class="del binIco" type="button"><i></i></button>
+                        </div>
+                    </td>
+				</tr>
+				<tr class="disabled editable">
+					<td class="check_btn">
+						<input type="checkbox" disabled="disabled" />
+					</td>
+					<td>HT</td>
+					<td>LLi,Hong/pAC798</td>
+					<td>HongZi, Li</td>
+					<td>
+						<select name="" id="">
+							<option value="1339092">1339092</option>
+							<option value="2339093">2339093</option>
+							<option value="3339094">3339094</option>
+							<option value="4339095">4339095</option>
+						</select>
+					</td>
+					<td>O2J</td>
+					<td>
+						<input class="text" type="text" tip="" />
+					</td>
+					<td>1</td>
+					<td>
+						<input class="text" type="text" tip="" />
+					</td>
+					<td>
+						<select name="" id="">
+							<option value="DEV">DEV</option>
+							<option value="DEV2">DEV2</option>
+							<option value="DE3">DE3</option>
+							<option value="DEV4">DEV4</option>
+						</select>
+					</td>
+					<td>
+						<div class="td_status">
+							<i class="dotIco blue"></i>new
+						</div>
+					</td>
+					<td>
+                        <div class="td_action">    
+                            <button data-title="no_tit_tip" title="delete" class="del binIco" type="button"><i></i></button>
+                        </div>
+                    </td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- / table -->
+				
+        <!-- bottom of table -->
+		<div class="table_tit clearfix">
+			<div class="table_tit_r">
+				<button class="black_btn" type="button">Submit</button>
+			</div>
+			<strong>To be Submitted:<span class="num_toBeSbmt">1</span></strong>
+		</div>
+		<!-- / bottom of table -->
+				
+	</div>
+	<!-- / main content -->
+	
+	<!-- footer -->
+	<div class="footer clearfix">
+		<div class="wrap">
+            <a href="homepage.html" class="logo">Company</a>
+            <ul>
+                <li><a href="">SSTC</a></li>
+                <li><a href="">Atrack</a></li>
+                <li><a href="">SSHOME</a></li>
+                <li><a href="">LMS</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="">eBusiness</a></li>
+            </ul>
+		</div>
+	</div>
+	<!-- / footer -->
+	
+	<!-- fixed elements -->
+	<div class="fixed">
+		<a title="Add one record" class="btn add_row" href="javascript:;">Add one record</a>
+		<a title="Go to top" class="btn to_top" href="javascript:;">Go to top</a>
+		<!-- fixed_table -->
+		<div class="fixed_table">
+			<div class="mask"></div>
+			<table class="data_table">
+				<thead>
+					<tr>
+						<th class="select_all w30 hidden">
+							<input type="checkbox" />
+						</th>
+						<th class="w65">Resource Category</th>
+						<th class="w70">Name/ID</th>
+						<th class="none">Created By</th>
+						<th class="w60">Cost Center</th>
+						<th class="w80">Project</th>
+						<th class="w45">Billable Hours</th>
+						<th class="w50 none">Atrack Hours</th>
+						<th class="w60">Tasks</th>
+						<th class="w60">Service Category</th>
+						<th class="hidden">Status</th>
+						<th class="hidden"></th>
+					
+					<!--
+						<th class="select_all w30 hidden">
+							<input type="checkbox" />
+						</th>
+						<th class="w65">Resource Category</th>
+						<th class="w70">Name/ID</th>
+						<th class="w60">Cost Center</th>
+						<th>Project</th>
+						<th class="w45">Billable Hours</th>
+						<th class="w50 hidden">Atrack Hours</th>
+						<th class="w60">Tasks</th>
+						<th class="w60">Service Category</th>
+						<th class="w65 hidden">status</th>
+						<th class="hidden"></th>
+					-->
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="editable">
+						<td class="check_btn hidden">
+							<input type="checkbox" />
+						</td>
+						<td>
+							<select name="" id="">
+								<option value="HT$ZJU">HT$ZJU</option>
+								<option value="HT$ZJU2">HT$ZJU2</option>
+								<option value="HTZJU3ZJU">HT$ZJU3</option>
+								<option value="HTZJU4ZJU">HT$ZJU4</option>
+							</select>
+						</td>
+						<td>
+							<select name="" id="">
+								<option value="Bao,He/E335984">Bao,He/E335984</option>
+								<option value="Bao,He/E335984">Bao,He/E335984</option>
+								<option value="Bao,He/E335984">Bao,He/E335984</option>
+								<option value="Bao,He/E335984">Bao,He/E335984</option>
+							</select>
+						</td>
+						<td class="none">HongZi, Li</td>
+						<td>
+							<select name="" id="">
+								<option value="1339092">1339092</option>
+								<option value="2339093">2339093</option>
+								<option value="3339094">3339094</option>
+								<option value="4339095">4339095</option>
+							</select>
+						</td>
+						<td>
+							<input class="text" type="text" value="A2J" disabled="disabled" />
+						</td>
+						<td>
+							<input class="text" type="text" value="A2J" />
+						</td>
+						<td class="none">176</td>
+						<td>
+							<input class="text" type="text" value="A2J" value="3" />
+						</td>
+						<td>
+							<select name="" id="">
+								<option value="1339092">1339092</option>
+								<option value="2339093">2339093</option>
+								<option value="3339094">3339094</option>
+								<option value="4339095">4339095</option>
+							</select>
+						</td>
+						<td class="hidden"><i class="dotIco blue"></i>new</td>
+						<td class="hidden">
+						    <div class="td_action">
+						        <button data-title="no_tit_tip" title="delete" class="del binIco" type="button"><i></i></button>
+                            </div>
+                        </td>
+					</tr>
+				</tbody>
+			</table>
+			<button type="button" id="add_record" class="black_btn">Add</button>
+			<i class="table_tran"></i>
+		</div>
+		<!-- / fixed_table -->
+	</div>
+	<!-- / fixed elements -->
+	
+    <!--mask of pop up window-->
+    <div id="pop_win_mask" class="pop_win_mask"></div>
+    <!-- pop up window -->
+    <div id="pop_win" class="pop_win">
+        <div class="pop_win_in_mask"></div>
+        <!--loading image, class 'none'=" display:none"-->
+        <div id="pop_generalTip" class="pop_win_in center none">
+            <p>success</p>
+            <p class="tc mt">
+                <button type="button" class="auto_c_btn prim pop_win_close">Ok</button>
+            </p>
+        </div>
+    </div>
+    <!-- / pop up window -->
+	
+	<script type="text/javascript" src="./js/jQuery.1.7.2.min.js"></script>
+	<script type="text/javascript" src="./js/pris.js"></script>
+    <!-- jquery monthpicker -->
+	<script type="text/javascript" src="./js/plugins/jquery.mtz.monthpicker/jquery.mtz.monthpicker.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			fedPris.billing();
+			
+			//example: reject pop up tip
+			$('.reject_text .sbmt').click(function(){
+                fedPris.popWinShow({
+                    id: "#pop_generalTip",
+                    maskOut: true,
+                    maskIn: true
+                });
+			});
+		});
+	</script>
+</div>
+</body>
+</html>

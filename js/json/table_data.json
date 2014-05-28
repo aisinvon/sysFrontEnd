@@ -1,0 +1,34 @@
+[
+    {
+        "Name": "Chen,Yao",
+        "Request": "SSTZ PMO",
+        "Project": "China Technology Center PMO",
+        "CostCenter": "1339027",
+        "Date": " 2013 09.01- 09.17",
+        "Hours": " 40"
+    },
+    {
+        "Name": "Chen,Yao, 2",
+        "Request": "SSTZ PMO, 2",
+        "Project": "China Technology Center PMO, 2",
+        "CostCenter": "1339027, 2",
+        "Date": " 2013 09.01- 09.17, 2",
+        "Hours": " 40"
+    },
+    {
+        "Name": "Chen,Yao, 3",
+        "Request": "SSTZ PMO, 3",
+        "Project": "China Technology Center PMO, 3",
+        "CostCenter": "1339027, 3",
+        "Date": " 2013 09.01- 09.17, 3",
+        "Hours": " 40"
+    },
+    {
+        "Name": "Chen,Yao, 4",
+        "Request": "SSTZ PMO, 4",
+        "Project": "China Technology Center PMO, 4",
+        "CostCenter": "1339027, 4",
+        "Date": " 2013 09.01- 09.17, 4",
+        "Hours": " 40"
+    }
+]

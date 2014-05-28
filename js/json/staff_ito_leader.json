@@ -1,0 +1,92 @@
+{
+    "currentHour": "110",
+    "people": [
+        {
+            "leader": "yes",
+            "name": "ZhangSang",
+            "eid": "585332"
+        },
+        {
+            "leader": "no",
+            "name": "ZhangSan 2",
+            "eid": "385332"
+        },
+        {
+            "leader": "yes",
+            "name": "LiSi",
+            "eid": "485332"
+        },
+        {
+            "leader": "yes",
+            "name": "LiSi",
+            "eid": "685332"
+        },
+        {
+            "leader": "yes",
+            "name": "LiSi",
+            "eid": "785332"
+        },
+        {
+            "leader": "yes",
+            "name": "LiSi",
+            "eid": "785332"
+        },
+        {
+            "leader": "yes",
+            "name": "LiSi",
+            "eid": "785332"
+        },
+        {
+            "leader": "yes",
+            "name": "LiSi",
+            "eid": "785332"
+        },
+        {
+            "leader": "yes",
+            "name": "LiSi",
+            "eid": "785332"
+        },
+        {
+            "leader": "yes",
+            "name": "LiSi",
+            "eid": "785332"
+        }
+    ],
+    "hour": [
+        {
+            "name": "PRD",
+            "data": [
+                10,
+                0,
+                50,
+                20,
+                30,
+                2,
+                2,
+                2,
+                2,
+                2
+            ]
+        },
+        {
+            "name": "DEV",
+            "data": [
+                40,
+                60,
+                20,
+                12,
+                23
+            ]
+        },
+        {
+            "name": "TEST",
+            "data": [
+                50,
+                70,
+                100,
+                32,
+                5
+            ]
+        }
+    ]
+}

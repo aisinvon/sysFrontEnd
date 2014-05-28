@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>My Project ITO</title>
+        <link rel="stylesheet" type="text/css" href="./css/base.css" />
+        <link rel="stylesheet" type="text/css" href="./css/pris.css" />
+    </head>
+    
+    <body>
+        <div class="pageWrapper">
+            <!-- top -->
+            <div class="top clearfix">
+                <div class="wrap">
+                    <a class="logo" href="">
+                        <img src="./images/logo.png" alt="Company" />
+                    </a>
+                    <img class="slogan" src="./images/slogan.png" alt="Company Hangzhou: Project Resource Information System (PRIS)" />
+                </div>
+            </div>
+            <!-- / top -->
+            <!-- nav -->
+            <div class="nav">
+                <div class="wrap">
+                    <ul class="clearfix">
+                        <!-- add class on, then that nav will be highlighted -->
+                        <li>
+                            <a href="./">Homepage</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">My Staff</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="mystaff_bpo.html">BPO</a>
+                                </li>
+                                <li>
+                                    <a href="mystaff_ito.html">ITO</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li class="on">
+                            <a href="javascript:;">My Project</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="myproject_bpo.html">BPO</a>
+                                </li>
+                                <li>
+                                    <a href="myproject_ito.html">ITO</a>
+                                </li>
+                                <li>
+                                    <a href="myproject_pmo.html">PMO</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">Operation Service</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">Billing
+                                        <i></i>
+                                    </a>
+                                    <!-- third level menu -->
+                                    <ul>
+                                        <li>
+                                            <a href="billing_tl.html">Team Leader</a>
+                                        </li>
+                                        <li>
+                                            <a href="billing_pm.html">PM</a>
+                                        </li>
+                                        <li>
+                                            <a href="billing_pmo.html">PMO</a>
+                                        </li>
+                                    </ul>
+                                    <!-- / third level menu -->
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Invoice</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">Report Center</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">Executive Dashboard/Report</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Operational Report</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Atrack Customized report
+                                        <i></i>
+                                    </a>
+                                    <!-- third level menu -->
+                                    <ul>
+                                        <li>
+                                            <a href="structure_report_01_chart.html">Structure Report</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">Atrack Report</a>
+                                        </li>
+                                    </ul>
+                                    <!-- / third level menu -->
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Other</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- / nav -->
+            <!-- main content -->
+            <div class="main wrap">
+                <p class="crumb">
+                    <a href="./homepage.html">Home</a>&gt;&gt;
+                    <a href="">My Project</a>&gt;&gt;
+                    <span>ITO</span>
+                </p>
+
+                <!-- table -->
+                <table id="project_table" class="project_table">
+                    <thead>
+                        <tr>
+                            <!-- if the column need to be sorted, then should add property 'data-type' -->
+                            <th>Business Unit</th>
+                            <th>Team</th>
+                            <th>Offshore Manager</th>
+                            <th>Offshore Teamleader</th>
+                            <th>
+                                <div class="edit_info">
+                                    <i class="jsTipIco alertIco"></i>Project
+                                    <div class="jsTip tip">updated info
+                                        <i></i>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>Project Leader</th>
+                            <th>Headcount</th>
+                            <th>Start</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--module 1-->
+                        <tr>
+                            <td>AAA</td>
+                            <td>Team 1</td>
+                            <td>Han, Tian</td>
+                            <td>Jim, Green</td>
+                            <td>
+                                <div class="td_project">
+                                    <p>Project 1</p>
+                                    <p class="action_p"><a href="edit_project.html"><i class="editIco_s"></i>Edit project</a></p>  
+                                </div>
+                            </td>
+                            <td>Da, Ming</td>
+                            <td>
+                                <div class="td_headc">
+                                    <p>THT: 500</p>
+                                    <p>ZJ: 100</p>
+                                    <p>HZ: 200</p>
+                                    <p>IT: 200</p>
+                                </div>
+                            </td>
+                            <td>11, Jun, 2012</td>
+                        </tr>
+                        <tr>
+                            <td>AAA</td>
+                            <td>Team 1</td>
+                            <td>Deng, Tian</td>
+                            <td>Xiao, Bai</td>
+                            <td>
+                                <div class="td_project">
+                                    <p>Project 1</p>
+                                    <p class="action_p"><a href="edit_project.html"><i class="editIco_s"></i>Edit project</a></p>  
+                                </div>
+                            </td>
+                            <td>Xiao, Ming</td>
+                            <td>
+                                <div class="td_headc">
+                                    <p>THT: 500</p>
+                                    <p>ZJ: 100</p>
+                                    <p>HZ: 200</p>
+                                    <p>IT: 200</p>
+                                </div>
+                            </td>
+                            <td>11, Jun, 2012</td>
+                        </tr>
+                        <!--/ module 1-->
+                    </tbody>
+                </table>
+                <!-- / table -->
+            </div>
+            <!-- / main content -->
+            <!-- footer -->
+            <div class="footer">
+                <div class="wrap clearfix">
+                    <a href="homepage.html" class="logo">Company</a>
+                    <ul>
+                        <li>
+                            <a href="">SSTC</a>
+                        </li>
+                        <li>
+                            <a href="">Atrack</a>
+                        </li>
+                        <li>
+                            <a href="">SSHOME</a>
+                        </li>
+                        <li>
+                            <a href="">LMS</a>
+                        </li>
+                        <li>
+                            <a href="">Support</a>
+                        </li>
+                        <li>
+                            <a href="">eBusiness</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- / footer -->
+            <!-- fixed elements -->
+            <div class="fixed">
+                <a title="Go to top" class="btn to_top" href="javascript:;">Go to top</a>
+            </div>
+            <!-- / fixed elements -->
+            <script type="text/javascript" src="./js/jQuery.1.7.2.min.js"></script>
+            <script type="text/javascript" src="./js/pris.js"></script>
+            <!-- hightcharts -->
+            <script type="text/javascript" src="./js/plugins/highcharts/highcharts.js"></script>
+            <script type="text/javascript">
+            $(function() {
+                fedPris.project();
+            });
+            </script>
+
+        </div>
+    </body>
+    
+</html>
+

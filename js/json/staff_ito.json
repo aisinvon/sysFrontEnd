@@ -1,0 +1,78 @@
+{
+    "currentHour": "120",
+    "people": [
+        {
+            "leader": "yes",
+            "name": "ZhangSan",
+            "eid": "1111"
+        },
+        {
+            "leader": "no",
+            "name": "ZhangSan 2",
+            "eid": "222"
+        },
+        {
+            "leader": "no",
+            "name": "LiSi",
+            "eid": "333"
+        },
+        {
+            "leader": "no",
+            "name": "LiSi2",
+            "eid": "444"
+        },
+        {
+            "leader": "no",
+            "name": "LiSi2",
+            "eid": "555"
+        },
+        {
+            "leader": "no",
+            "name": "LiSi2",
+            "eid": "666"
+        },
+        {
+            "leader": "no",
+            "name": "LiSi2",
+            "eid": "7777"
+        },
+        {
+            "leader": "no",
+            "name": "LiSi2",
+            "eid": "88888"
+        }
+    ],
+    "hour": [
+        {
+            "name": "PRD",
+            "data": [
+                10,
+                0,
+                23,
+                25,
+                3,
+                3,
+                6,
+                6
+            ]
+        },
+        {
+            "name": "DEV",
+            "data": [
+                60,
+                20,
+                35,
+                42
+            ]
+        },
+        {
+            "name": "TEST",
+            "data": [
+                50,
+                30,
+                33,
+                55
+            ]
+        }
+    ]
+}

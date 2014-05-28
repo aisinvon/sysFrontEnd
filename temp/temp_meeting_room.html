@@ -1,0 +1,594 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Meeting Room</title>
+        <link rel="stylesheet" type="text/css" href="./css/base.css" />
+        <link rel="stylesheet" type="text/css" href="./css/pris.css" />
+        <link rel="stylesheet" type="text/css" href="./css/plugins/fullcalendar/fullcalendar.min.css" />
+    </head>
+    <body>
+        <div class="pageWrapper">
+            <!-- top -->
+            <div class="top clearfix">
+                <div class="wrap">
+                    <a class="logo" href=""><img src="./images/logo.png" alt="STATE STREET" /></a>
+                    <img class="slogan" src="./images/slogan.png" alt="State Street Hangzhou: Project Resource Information System (PRIS)" />		
+                </div>
+            </div>
+            <!-- / top -->
+            
+            <!-- nav -->
+            <div class="nav">
+                <div class="wrap">
+                    <ul class="clearfix">
+                        <!-- add class on, then that nav will be highlighted -->
+                        <li class="on"><a href="./">Homepage</a></li>
+                        <li>
+                            <a href="javascript:;">My Staff</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="mystaff_bpo.html">BPO</a>
+                                </li>
+                                <li>
+                                    <a href="mystaff_ito.html">ITO</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">My Project</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="myproject_bpo.html">BPO</a>
+                                </li>
+                                <li>
+                                    <a href="myproject_ito.html">ITO</a>
+                                </li>
+                                <li>
+                                    <a href="myproject_pmo.html">PMO</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">Operation Service</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">Billing<i></i></a>
+                                    <!-- third level menu -->
+                                    <ul>
+                                        <li>
+                                            <a href="billing_tl.html">Team Leader</a>
+                                        </li>
+                                        <li>
+                                            <a href="billing_pm.html">PM</a>
+                                        </li>
+                                        <li>
+                                            <a href="billing_pmo.html">PMO</a>
+                                        </li>
+                                    </ul>
+                                    <!-- / third level menu -->
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Invoice</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">Report Center</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">Executive Dashboard/Report</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Operational Report</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Atrack Customized report<i></i></a>
+                                    <!-- third level menu -->
+                                    <ul>
+                                        <li>
+                                            <a href="structure_report_01_chart.html">Structure Report</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">Atrack Report</a>
+                                        </li>
+                                    </ul>
+                                    <!-- / third level menu -->
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Other</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- / nav -->
+            
+            <!-- main content -->
+            <div class="main wrap">
+                
+                <h3 class="pg_tit">Meeting Room <a class="tab_lnk" href="">Tang</a><a class="tab_lnk on" href="">Maxia</a><a class="tab_lnk" href="">Reserved</a></h3>
+                
+                <!--meet_room-->
+                <div id="meet_room" class="meet_room">
+                    <ul class="tab_tit clearfix">
+                        <li>J2<i></i></li>
+                        <li>J3<i></i></li>
+                    </ul>
+                    
+                    <button id="test" type="button">Get</button>
+                    
+                    <!--j2-->   
+                    <div class="tab_con clearfix">		        	        
+                        <!--room_hd-->
+                        <div class="room_hd clearfix">
+                            <span class="date_chos">
+                                <em>Web</em>
+                                <strong>23</strong>
+                                <ins>2013.10</ins>
+                            </span>
+                            <div class="room_status">
+                                <h5>Shanghai</h5>
+                                <p>(2F)</p>
+                                <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                <i class="deviceIco tvIco"></i>
+                                <i class="deviceIco projIco"></i>
+                                <i class="deviceIco telIco"></i>
+                            </div>
+                            <div class="room_status">
+                                <h5>Kansas</h5>
+                                <p>(3F)</p>
+                                <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                <i class="deviceIco tvIco no"></i>
+                                <i class="deviceIco projIco"></i>
+                                <i class="deviceIco telIco"></i>
+                            </div>
+                            <div class="room_status">
+                                <h5>Cambridge</h5>
+                                <p>(4F)</p>
+                                <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                <i class="deviceIco tvIco"></i>
+                                <i class="deviceIco projIco no"></i>
+                                <i class="deviceIco telIco"></i>
+                            </div>
+                            <div class="room_status">
+                                <h5>Gfrafton</h5>
+                                <p>(4F)</p>
+                                <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                <i class="deviceIco tvIco"></i>
+                                <i class="deviceIco projIco"></i>
+                                <i class="deviceIco telIco no"></i>
+                            </div>
+                            <div class="room_status">
+                                <h5>Milton</h5>
+                                <p>(4F)</p>
+                                <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                <i class="deviceIco tvIco"></i>
+                                <i class="deviceIco projIco"></i>
+                                <i class="deviceIco telIco"></i>
+                            </div>
+                            <div class="room_status">
+                                <h5>Hong kong</h5>
+                                <p>(4F)</p>
+                                <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                <i class="deviceIco tvIco"></i>
+                                <i class="deviceIco projIco"></i>
+                                <i class="deviceIco telIco"></i>
+                            </div>
+                            <div class="room_status">
+                                <h5>PublicGarden</h5>
+                                <p>(5F)</p>
+                                <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                <i class="deviceIco tvIco"></i>
+                                <i class="deviceIco projIco"></i>
+                                <i class="deviceIco telIco"></i>
+                            </div>
+                            <div class="room_status">
+                                <h5>Westborough</h5>
+                                <p>(5F)</p>
+                                <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                <i class="deviceIco tvIco"></i>
+                                <i class="deviceIco projIco"></i>
+                                <i class="deviceIco telIco"></i>
+                            </div>
+                            <div class="room_status">
+                                <h5>WestWood</h5>
+                                <p>(5F)</p>
+                                <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                <i class="deviceIco tvIco"></i>
+                                <i class="deviceIco projIco"></i>
+                                <i class="deviceIco telIco"></i>
+                            </div>
+                        </div>
+                        <!-- / room_hd-->
+                        
+                        <div class="meet_cale"></div>
+                        <div class="meet_cale"></div>
+                        <div class="meet_cale"></div>
+                        <div class="meet_cale"></div>
+                    </div>
+                    <!-- / j2-->   
+                    
+                    <!--j3-->
+                    <div class="tab_con clearfix">		        
+                        <!--room_hd-->
+                        <div class="room_hd clearfix">
+                            <span class="date_chos">
+                                <em>Web</em>
+                                <strong>23</strong>
+                                <ins>2013.10</ins>
+                            </span>
+                            <div class="room_status">
+                                <h5>Shanghai</h5>
+                                <p>(2F)</p>
+                                <!--if there is no such device in the room, pls add class 'no', for example: <i class="deviceIco tvIco no"></i>-->
+                                <i class="deviceIco tvIco no"></i>
+                                <i class="deviceIco projIco no"></i>
+                                <i class="deviceIco telIco no"></i>
+                            </div>
+                        </div>
+                        <!-- / room_hd-->
+                        
+                        <div class="meet_cale"></div>
+                        <div class="meet_cale"></div>
+                    </div>
+                    <!-- / j3-->
+                </div>
+                <!-- / meet_room-->
+                
+            </div>
+            <!-- / main content -->
+            
+            <!-- footer -->
+            <div class="footer clearfix">
+                <div class="wrap">
+                    <a href="homepage.html" class="logo">STATE STREET</a>
+                    <ul>
+                        <li><a href="">SSTC</a></li>
+                        <li><a href="">Atrack</a></li>
+                        <li><a href="">SSHOME</a></li>
+                        <li><a href="">LMS</a></li>
+                        <li><a href="">Support</a></li>
+                        <li><a href="">eBusiness</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- / footer -->
+            
+            <script type="text/javascript" src="./js/jQuery.1.7.2.min.js"></script>
+            <script type="text/javascript" src="./js/pris.js"></script>
+            <!--fullcalendar-->
+            <script type="text/javascript" src="./js/plugins/fullcalendar/jquery.ui.custom.min.js"></script>
+            <script type="text/javascript" src="./js/plugins/fullcalendar/fullcalendar.min.js"></script>
+            <script type="text/javascript">
+                $(function(){
+                    
+                    fedPris.meetingRoom();
+                    
+                    /*calendar start*/			
+                    var date = new Date();
+                    var d = date.getDate();
+                    var m = date.getMonth();
+                    var y = date.getFullYear();
+                    /*$('#meet_room_1').fullCalendar({
+				header: false,
+				defaultView: 'agendaDay',
+				height: 610,
+				editable: true,
+				events: [
+                    {
+                        title: 'All Day Event',
+                        start: new Date(y, m, 1)
+                    },
+                    {
+                        title: 'Long Event',
+                        start: new Date(y, m, d-5),
+                        end: new Date(y, m, d-2)
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: new Date(y, m, d-3, 16, 0),
+                        allDay: false
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: new Date(y, m, d+4, 16, 0),
+                        allDay: false
+                    },
+                    {
+                        title: 'Meeting',
+                        start: new Date(y, m, d, 10, 30),
+                        allDay: false
+                    },
+                    {
+                        title: 'Lunch',
+                        start: new Date(y, m, d, 12, 0),
+                        end: new Date(y, m, d, 14, 0),
+                        allDay: false
+                    },
+                    {
+                        title: 'Birthday Party',
+                        start: new Date(y, m, d+1, 19, 0),
+                        end: new Date(y, m, d+1, 22, 30),
+                        allDay: false
+                    },
+                    {
+                        title: 'Click for Google',
+                        start: new Date(y, m, 28),
+                        end: new Date(y, m, 29),
+                        url: 'http://google.com/'
+                    }
+                ],
+                eventClick: function(e) {
+                    if (e.url) { return false; }
+                },
+                eventMouseover: function(calEvent, jsEvent) {
+                    $(this).mouseover(function() {
+                        $(this).attr('title', calEvent.title);
+                       
+                    });
+                },
+                eventRender: function(event, element) {
+                    fedPris.meetRoomCale();
+                }
+
+			});*/
+            
+            /*$('#meet_room_2').fullCalendar({
+				header: false,
+				defaultView: 'agendaDay',
+				height: 610,
+				editable: true,
+				events: [
+                    {
+                        id: 1,
+                        title: "Long Event",
+                        start: new Date(y, m, d, 14, 0),
+                        end: new Date(y, m, d+3),
+                        allDay: false
+                    },
+                    {
+                        id: 2,
+                        title: "Repeating Event",
+                        start: new Date(y, m, d-1),
+                        allDay: true
+                    },
+                    {
+                        id: 2,
+                        title: "Repeating Event",
+                        start: new Date(y, m, d+6),
+                        allDay: true
+                    },
+                    {
+                        id: 3,
+                        title: "Meeting",
+                        start: new Date(y, m, d, 9, 0),
+                        allDay: false
+                    },
+                    {
+                        id: 4,
+                        title: "Click for Facebook",
+                        start: new Date(y, m, d, 16),
+                        end: new Date(y, m, d),
+                        url: "http://facebook.com/",
+                        allDay: false
+                    }
+                ],
+                eventClick: function(e) {
+                    if (e.url) { return false; }
+                },
+                eventMouseover: function(calEvent, jsEvent) {
+                    $(this).mouseover(function() {
+                        $(this).attr('title', calEvent.title);
+                       
+                    });
+                },
+                eventRender: function(event, element) {
+                    fedPris.meetRoomCale();
+                }
+
+			});
+			*/
+            /*$('#meet_room_3').fullCalendar({
+				header: false,
+				defaultView: 'agendaDay',
+				height: 610,
+				editable: true,
+				events: [
+                    {
+                        id: 1,
+                        title: "Long Event",
+                        start: new Date(y, m, d, 14, 0),
+                        end: new Date(y, m, d+3),
+                        allDay: false
+                    },
+                    {
+                        id: 2,
+                        title: "Repeating Event",
+                        start: new Date(y, m, d-1),
+                        allDay: true
+                    },
+                    {
+                        id: 2,
+                        title: "Repeating Event",
+                        start: new Date(y, m, d+6),
+                        allDay: true
+                    },
+                    {
+                        id: 3,
+                        title: "Meeting",
+                        start: new Date(y, m, d, 9, 0),
+                        allDay: false
+                    },
+                    {
+                        id: 4,
+                        title: "Click for Facebook",
+                        start: new Date(y, m, d, 16),
+                        end: new Date(y, m, d),
+                        url: "http://facebook.com/",
+                        allDay: false
+                    }
+                ],
+                eventClick: function(e) {
+                    if (e.url) { return false; }
+                },
+                eventMouseover: function(calEvent, jsEvent) {
+                    $(this).mouseover(function() {
+                        $(this).attr('title', calEvent.title);
+                       
+                    });
+                },
+                eventRender: function(event, element) {
+                    fedPris.meetRoomCale();
+                }
+
+			});*/
+            /*calendar end*/
+            
+            
+            // ajax get table data start    
+/*             $('#meet_room_1').fullCalendar({
+                    header: false,
+                    defaultView: 'agendaDay',
+                    height: 610,
+                    editable: true,
+                    events: 'js/meet_room_2.json'
+                });*/
+                        
+          $.getJSON( "js/meet_room.json", function( data ) {
+                var meetingData = data;
+                for(var i in meetingData){
+                    $('#meet_room_' + i).fullCalendar({
+                        header: false,
+                        defaultView: 'agendaDay',
+                        height: 610,
+                        editable: true,
+                        events: meetingData[i],
+                        eventClick: function(e) {
+                            if (e.url) { return false; }
+                        },
+                        eventMouseover: function(calEvent, jsEvent) {
+                            $(this).mouseover(function() {
+                                $(this).attr('title', calEvent.title);
+                               
+                            });
+                        },
+                        eventRender: function(event, element) {
+                            fedPris.meetRoomCale();
+                        }
+                    });
+                }
+            });
+/*                $.each( data, function( key, val ) {
+                    var roomData = JSON.stringify(data),
+                        roomIndex = key;
+                    
+                    $('#meet_room_' + key).fullCalendar({
+                        header: false,
+                        defaultView: 'agendaDay',
+                        height: 610,
+                        editable: true,
+                        events: roomData
+                    });
+                    console.log(key + '/' + data);
+                });*/
+            
+            $('#test').click(function(){
+                $.ajax({
+                    type: "GET",
+                    url: "js/meet_room.json",
+                    dataType: "json",
+                    success: function(data){
+                        var room = data;
+                        for(i in room){
+                            $('#meet_room_' + i).fullCalendar({
+                                    header: false,
+                                    defaultView: 'agendaDay',
+                                    height: 610,
+                                    editable: true,
+                                    events: room[i],
+                                    eventClick: function(e) {
+                                        if (e.url) { return false; }
+                                    },
+                                    eventMouseover: function(calEvent, jsEvent) {
+                                        $(this).mouseover(function() {
+                                            $(this).attr('title', calEvent.title);
+                                           
+                                        });
+                                    },
+                                    eventRender: function(event, element) {
+                                        fedPris.meetRoomCale();
+                                    }
+                                });
+                         }
+                    }
+                });
+            });
+            
+            /* $('#test').click(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: 'js/meet_room.json',
+                    dataType: 'json',
+                    beforeSend: function(){                 
+                    },
+                    success: function (data){
+                        var room = data;
+                        for(i in room){
+                            console.log(room(i));
+                        }*/
+            
+            //                    $.each(data, function(key, value){
+            
+            
+            //                        console.log(Object.length);
+            //                        console.log(typeof data.sdfsfsf[0].title);
+            
+            /*                        for(var i = 4; i < 7; i++){
+                            $('#meet_room_' + i).fullCalendar({
+                                header: false,
+                                defaultView: 'agendaDay',
+                                height: 610,
+                                editable: true,
+                                events: (key, value)
+                            });
+                        }*/
+            
+            //                    })
+            
+            
+            /*                        var roomObj = data,
+                            roomObjLen = Object.keys(roomObj).length;                        
+                        $.each(data, function(index, room){
+                            console.log(index);
+                            console.log(roomObj[index]);
+                            for(var i = 4; i < 7; i++){
+                                $('#meet_room_' + i).fullCalendar({
+                                    header: false,
+                                    defaultView: 'agendaDay',
+                                    height: 610,
+                                    editable: true,
+                                    events: roomObj[index]
+                                });
+                            }
+                        });*/
+            //                    }
+            //                });
+            //            });
+            // ajax get table data end
+        });
+    </script>
+    </div>
+    </body>
+</html>

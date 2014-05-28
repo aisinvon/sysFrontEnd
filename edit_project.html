@@ -1,0 +1,639 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Edit Project</title>
+        <link rel="stylesheet" type="text/css" href="./css/base.css" />
+        <link rel="stylesheet" type="text/css" href="./css/pris.css" />
+        <!-- jQuery ui-->
+        <link rel="stylesheet" type="text/css" href="./css/plugins/jquery-ui/jquery.ui.min.css" />
+    </head>
+    <body>
+        <div class="pageWrapper">
+            <!-- top -->
+            <div class="top clearfix">
+                <div class="wrap">
+                    <a class="logo" href=""><img src="./images/logo.png" alt="Company" /></a>
+                    <img class="slogan" src="./images/slogan.png" alt="Company Hangzhou: Project Resource Information System (PRIS)" />		
+                </div>
+            </div>
+            <!-- / top -->
+            
+            <!-- nav -->
+            <div class="nav">
+                <div class="wrap">
+                    <ul class="clearfix">
+                        <!-- add class on, then that nav will be highlighted -->
+                        <li class="on"><a href="./">Homepage</a></li>
+                        <li>
+                            <a href="javascript:;">My Staff</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="mystaff_bpo.html">BPO</a>
+                                </li>
+                                <li>
+                                    <a href="mystaff_ito.html">ITO</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">My Project</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="myproject_bpo.html">BPO</a>
+                                </li>
+                                <li>
+                                    <a href="myproject_ito.html">ITO</a>
+                                </li>
+                                <li>
+                                    <a href="myproject_pmo.html">PMO</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">Operation Service</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">Billing<i></i></a>
+                                    <!-- third level menu -->
+                                    <ul>
+                                        <li>
+                                            <a href="billing_tl.html">Team Leader</a>
+                                        </li>
+                                        <li>
+                                            <a href="billing_pm.html">PM</a>
+                                        </li>
+                                        <li>
+                                            <a href="billing_pmo.html">PMO</a>
+                                        </li>
+                                    </ul>
+                                    <!-- / third level menu -->
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Invoice</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">Report Center</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">Executive Dashboard/Report</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Operational Report</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Atrack Customized report<i></i></a>
+                                    <!-- third level menu -->
+                                    <ul>
+                                        <li>
+                                            <a href="structure_report_01_chart.html">Structure Report</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">Atrack Report</a>
+                                        </li>
+                                    </ul>
+                                    <!-- / third level menu -->
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Other</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- / nav -->
+            
+            <!-- main content -->
+            <div class="main wrap clearfix">
+                
+                <h3 class="pg_tit">Project Profile</h3>
+                <p class="tr"><a class="bluLnk" href="all-project.html"><i class="viewIco"></i>View All Projects</a></p>
+                
+                <!--edit project-->
+                <div id="edit_proj" class="edit_proj mt">
+                    
+                    <!--module Project Management Profile-->
+                    <div class="tab_con tab_projfile none">                        
+                        <form action="">
+                            
+                            <!--edit_proj_top-->
+                            <div class="edit_proj_top">                                
+                                
+                                <!--mod_white-->
+                                <div class="mod_white clearfix">        
+                                    <button class="js_sbmt_btn black_btn prim fr" type="button">Submit</button>
+                                    <button class="js_sbmt_btn black_btn fr" type="button">Save</button> 
+                                    <a class="black_btn" href="http://pris/V2/">Return</a>                        
+                                    <button class="black_btn" type="button">Print</button>                               
+                                </div>
+                                <!--/mod_white-->
+                                
+                                <!--mod_closeipt-->
+                                <div class="mod_closeipt clearfix">
+                                    <div class="in fr">
+                                        <!--<label for="proj_close">Closed the project:</label>-->
+                                        <!--<span id="proj_status" class="proj_status"><em class="on">Open</em><em>Close</em></span>-->
+                                        <!--value of open or close: open is false, close is true-->
+                                        <!--<input id="proj_close" type="checkbox" class="none" />-->
+                                        <span class="tip_required"><b class="must_dot">*</b> Required</span>
+                                    </div>
+                                    <div id="proj_titName" class="proj_titName">
+                                        <h3>
+                                            <!--value of title of project-->
+                                            <input type="text" class="proj_titName_ipt text none" value="Community Based Technology" />
+                                            <span>Community Based Technology</span>                                           
+                                            <i class="editIco_l"></i>                                           
+                                        </h3>
+                                        <p>Request for Unlocking: <i id="requ_unlock" class="lockIco"></i></p>
+                                        <!--<a class="edit_link" href="javascript:;">Edit Project Name</a>-->                                        
+                                    </div>                                    
+                                </div>
+                                <!--/mod_closeipt-->
+                                
+                                <!--mod_info 0-->
+                                <div class="mod_info">
+                                    <div class="mod_input">
+                                        <!-- mod_input_l-->
+                                        <div class="mod_input_l">
+                                            <div class="item clearfix">
+                                                <label class="label">Project status:</label>
+                                                <div class="iptWrap">
+                                                    <label class="label" for="open">Open</label>
+                                                    <input id="open" name="proj_status" class="radio proj_status" type="radio" value="Open" checked="checked" />
+                                                    <label class="label" for="close">Close</label>
+                                                    <input id="close" name="proj_status" class="radio proj_status" type="radio" value="Close" />
+                                                </div>                                                
+                                            </div>                                            
+                                        </div>
+                                        <!-- / mod_input_l-->
+                                        
+                                        <!-- mod_input_r-->
+                                        <div class="mod_input_r">
+                                            <div class="item clearfix">
+                                                <label class="label" for="version">Submitted Version:</label>
+                                                <select name="" id="version" class="not_disable">
+                                                    <option value="DEV">2013/12</option>
+                                                    <option value="DEV2">2013/11</option>
+                                                    <option value="DEV3">2013/10</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- / mod_input_r-->       
+                                    </div>
+                                </div>
+                                <!--mod_info 0-->
+                                
+                                <!--mod_info 1-->
+                                <div class="mod_info">
+                                    
+                                    <h4>Project Information</h4>
+                                    
+                                    <!-- mod_input-->
+                                    <div class="mod_input">                                    
+                                        <!-- mod_input_l-->
+                                        <div class="mod_input_l">
+                                            <div class="item clearfix">
+                                                <label class="label" for="team"><b>*</b>Team:</label>
+                                                <input id="team" class="text input-validation-error" type="text" tip="enter text" />
+                                            </div>                                            
+                                            <div class="item clearfix">
+                                                <label class="label" for="status">Status:</label>
+                                                <select name="" id="status">
+                                                    <option value="DEV">DEV</option>
+                                                    <option value="DEV2">DEV2</option>
+                                                    <option value="DEV3">DEV3</option>
+                                                </select>
+                                            </div>
+                                            <div class="item clearfix">
+                                                <label class="label" for="start">Start:</label>
+                                                <input id="start" class="text date_month" type="text" tip="enter date" />
+                                            </div>
+                                        </div>
+                                        <!-- / mod_input_l-->
+                                        
+                                        <!-- mod_input_r-->
+                                        <div class="mod_input_r">
+                                            <div class="item clearfix">
+                                                <label class="label" for="shor_name"><b>*</b>Short Name:</label>
+                                                <input id="shor_name"  class="text" type="text" tip="enter text" />
+                                            </div>
+                                            <div class="item clearfix">
+                                                <label class="label" for="it_unit">IT Unit(Devision):</label>
+                                                <input id="it_unit" class="text" type="text" tip="enter text" />
+                                            </div>
+                                            <div class="item clearfix">
+                                                <label class="label" for="end">End:</label>
+                                                <input id="end" class="text date_month" type="text" tip="Till now" />
+                                            </div>
+                                        </div>
+                                        <!-- / mod_input_r-->                                    
+                                    </div>
+                                    <!-- / mod_input-->                                
+                                </div>
+                                <!--/mod_info 1-->
+                                
+                                <!--mod_info 2-->
+                                <div class="mod_info">
+                                    <h4>Dual-shore Basic Team Structure</h4>
+                                    
+                                    <!-- mod_input-->
+                                    <div class="mod_input">                                    
+                                        <!-- mod_input_l-->
+                                        <div class="mod_input_l">
+                                            <div class="item clearfix">
+                                                <label class="label" for="onshor_mana">On-shore Manager:</label>
+                                                <input id="onshor_mana"  class="text" type="text" tip="enter text" />
+                                            </div>
+                                            <div class="item clearfix">
+                                                <label class="label">Team Leader:</label>
+                                                <div class="iptWrap">
+                                                    <!--json url: data-source-idName-->
+                                                    <!--<span data-source-idName="http://pris/V2/api/Common/GetAllProfile" class="tls_slct_btn"><i class="personIco"></i>Select</span>-->
+                                                    <span data-source-idName="./js/json/teamLeader.json" class="tls_slct_btn"><i class="personIco"></i>Select</span>
+                                                    <div class="tls_selected_list none"></div>
+                                                    <!--selected id-->
+                                                    <input class="tls_slctId" type="hidden" />    
+                                                    <!--selected name-->
+                                                    <input class="tls_slctName" type="hidden" />    
+                                                </div>
+                                            </div>
+                                            <div class="item clearfix">
+                                                <label class="label" for="it_divi">IT Division Head:</label>
+                                                <input id="it_divi" class="text" type="text" tip="enter text" />
+                                            </div>
+                                        </div>
+                                        <!-- / mod_input_l-->
+                                        
+                                        <!-- mod_input_r-->
+                                        <div class="mod_input_r">
+                                            <div class="item clearfix">
+                                                <label class="label"><b>*</b>Off-shore Manager:</label> 
+                                                <div class="iptWrap">
+                                                    <!--json url: data-source-idName-->
+                                                    <!--<span data-source-idName="http://pris/V2/api/Common/GetAllProfile" class="tls_slct_btn"><i class="personIco"></i>Select</span>-->
+                                                    <span data-source-idName="./js/json/teamLeader.json" class="tls_slct_btn"><i class="personIco"></i>Select</span>
+                                                    <div class="tls_selected_list none"></div>
+                                                    <!--selected id-->
+                                                    <input class="tls_slctId" type="hidden" />    
+                                                    <!--selected name-->
+                                                    <input class="tls_slctName" type="hidden" />    
+                                                </div>
+                                            </div>
+                                            <div class="item clearfix">
+                                                <label class="label" for="unit_epre">Unit Representative:</label>                                                
+                                                <input id="unit_epre" class="text" type="text" tip="enter text" />
+                                            </div>
+                                        </div>
+                                        <!-- / mod_input_r-->                                    
+                                    </div>
+                                    <!-- / mod_input-->                                
+                                </div>
+                                <!--/mod_info 2-->
+                                
+                                <!--mod_info 3-->
+                                <div class="mod_info">
+                                    <h4>Project Overview(in English&Chinese)</h4>
+                                    
+                                    <!-- mod_input-->
+                                    <div class="mod_input">
+                                        
+                                        <div class="item clearfix">
+                                            <label class="label" for="tdc_no">TDC NO:</label>
+                                            <input id="tdc_no" class="text not_disable" type="text" value="Y12345678" disabled="disabled" />
+                                        </div>
+                                        
+                                        <div class="item clearfix">
+                                            <label for="proj_desc" class="label">Project Description:</label>
+                                            <textarea id="proj_desc" name="" spellcheck="false" readonly="readonly" tip="enter text">The SSHZ Community Based Technology team mainly works on the IT community technology. The team studies collaboration tools and pilots community construction in Company. The annual ICITFS event is mainly supported by this group. As well as the security scan tool research especially for SSHZ cloud migration team. 
+                                                
+道富社区技术小组主要致力于IT社区技术的研究与开发。该小组研究协作工具，并且在道富内部构建展示性质IT社区。每年一度的ICITFS会议主要是由该小组组织和支持。还有安全扫描工具特别是针对道富杭州云迁移项目组。</textarea>
+                                        </div>
+                                        
+                                        <div class="item clearfix">
+                                            <label for="prod_desc" class="label">Product Description:</label>
+                                            <textarea id="prod_desc" name="" spellcheck="false" tip="enter text">1. PEG Site Pilot
+2. ICITFS Public Site and Internal Organizer Site
+3. SRT tool
+                                                
+1. PEG技术社区站点研究与开发
+2. ICITFS的公共站点和组织者网站
+3. SRT代码安全扫描工具</textarea>
+                                        </div>
+                                        
+                                        <div class="item clearfix">
+                                            <label for="proj_obj" class="label">Project Object and Scope of Services:</label>
+                                            <textarea id="proj_obj" name="" readonly="readonly" spellcheck="false" tip="enter text">1. Research and develop community within Company.
+2. Develop and maintain ICITFS web sites
+3. Research code security scan technology, develop SRT tool
+                                                
+1. 研究和开发适应于公司发展的社区
+2. 开发和维护ICITFS网站
+3. 研究开发代码安全扫描技术，开发SRT工具</textarea>
+                                        </div>
+                                        
+                                        <div class="item clearfix">
+                                            <label for="constraints" class="label">Constraints:</label>
+                                            <textarea id="constraints" name="" spellcheck="false" tip="enter text"></textarea>
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- / mod_input-->
+                                    
+                                </div>
+                                <!--/mod_info 3-->
+                                
+                                <!--Project Team Communication Plan-->
+                                <div class="mod_toggle on">
+                                    <h4><i title="add new record" class="newInfoIco"></i>Project Team Communication Plan</h4>                                
+                                    <div class="toggle_con">
+                                        
+                                        <!-- mod_input-->
+                                        <div class="mod_input">                                        
+                                            <h4>Plan <em class="tit_index">1</em></h4>    
+                                            <div class="item item_long clearfix">
+                                                <label class="label" for="what_0">What:</label>
+                                                <input id="what_0" name="what_0" class="text" type="text" tip="enter text" />
+                                                <p class="field-validation-error" data-valmsg-for="what_0">
+                                                    <span for="what_0">The field DurationFrom must be a date.</span>
+                                                </p>
+                                            </div>
+                                            
+                                            <div class="item item_long clearfix">
+                                                <label class="label" for="prim_msg_0">Primary Msg:</label>
+                                                <!--if data-copy is 'yes', then reserve the value when copy it-->
+                                                <input id="prim_msg_0" name="prim_msg_0" class="text input-validation-error" type="text" tip="enter text" data-copy="yes" />
+                                                <p class="field-validation-valid" data-valmsg-for="prim_msg_0"></p>
+                                            </div>
+                                            
+                                            <div class="item item_long clearfix">
+                                                <label class="label" for="purp_0">Purpose:</label>
+                                                <input id="purp_0" class="text" type="text" tip="enter text" />
+                                            </div>
+                                            
+                                            <div class="item item_long clearfix">
+                                                <label class="label" for="owner_0">Owner:</label>
+                                                <input id="owner_0" class="text" type="text" tip="enter text" />
+                                            </div>                                        
+                                            
+                                            <div class="item item_long clearfix">
+                                                <label class="label" for="audi_0">Audience:</label>
+                                                <input id="audi_0" class="text" type="text" tip="enter text" />
+                                            </div>     
+                                            
+                                            <div class="item item_long clearfix">
+                                                <label class="label" for="meth_0">Method:</label>
+                                                <input id="meth_0" class="text" type="text" tip="enter text" />
+                                            </div>       
+                                            
+                                            <div class="item item_long clearfix">
+                                                <label class="label" for="when_freq_0">When/Frequency:</label>
+                                                <input id="when_freq_0" class="text" type="text" tip="enter text" />
+                                            </div>   
+                                            
+                                            <div class="item item_long clearfix">
+                                                <label class="label" for="dele_arti_0">Deleverable/Artifact:</label>
+                                                <input id="dele_arti_0" class="text" type="text" tip="enter text" />
+                                            </div>                               
+                                            
+                                            <i title="delete this record" class="delInfoIco"></i>
+                                            
+                                        </div>
+                                        <!-- / mod_input-->         
+                                                                   
+                                        <p class="upload_tip"></p>                                    
+                                    </div>
+                                </div>
+                                <!--/Project Team Communication Plan-->
+                                
+                            </div>
+                            <!--/ edit_proj_top-->
+                            
+                            <!--edit_proj_botm-->
+                            <div class="edit_proj_botm">
+                                
+                                <div class="mod_info">
+                                    <h4>Billing Authorization</h4>
+                                    <div class="mod_input">                                    
+                                        <!-- mod_input_l-->
+                                        <div class="mod_input_l">
+                                            <div class="item clearfix">
+                                                <label class="label">Billing for PM:</label>
+                                                <div class="iptWrap">
+                                                    <!--json url: data-source-idName-->
+                                                    <span class="tls_slct_btn" data-source-idname="./js/json/teamLeader.json"><i class="personIco"></i>Select</span>
+                                                    <div class="tls_selected_list none"></div>
+                                                    <!--selected id-->
+                                                    <input type="hidden" class="tls_slctId" value="P100618/">    
+                                                    <!--selected name-->
+                                                    <input type="hidden" class="tls_slctName" value="O/">    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- / mod_input_l-->
+                                        
+                                        <!-- mod_input_r-->
+                                        <div class="mod_input_r">
+                                            <div class="item clearfix">
+                                                <label class="label">Billing for Backup:</label> 
+                                                <div class="iptWrap">
+                                                    <!--json url: data-source-idName-->
+                                                    <span class="tls_slct_btn" data-source-idname="./js/json/Off-shoreManage.json"><i class="personIco"></i>Select</span>
+                                                    <div class="tls_selected_list none"></div>
+                                                    <!--selected id-->
+                                                    <input type="hidden" class="tls_slctId" value="A100417/">    
+                                                    <!--selected name-->
+                                                    <input type="hidden" class="tls_slctName" value="Bao, Lingfeng/">    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- / mod_input_r-->                                    
+                                    </div>
+                                </div>
+                                
+                                <p class="bordT"></p>
+                                
+                                <!--mod_info 1-->
+                                <div class="mod_info">
+                                    <h4>Finance/Resource Information</h4>
+                                    <table class="project_table">
+                                        <thead>
+                                            <tr>
+                                                <th width="50%">Budget</th>
+                                                <th width="50%">Resource</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="text" class="text" /></td>
+                                                <td><input type="text" class="text" /></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--/mod_info 1-->
+                                
+                                <p class="bordT"></p>
+                                
+                                <!--mod_white-->
+                                <div class="mod_white clearfix">        
+                                    <button class="js_sbmt_btn black_btn prim fr" type="button">Submit</button>
+                                    <button class="js_sbmt_btn black_btn fr" type="button">Save</button> 
+                                    <a class="black_btn" href="http://pris/V2/">Return</a>
+                                    <button class="black_btn" type="button">Print</button>                             
+                                </div>
+                                <!--/mod_white-->
+                                
+                            </div>
+                            <!--/edit_proj_botm-->
+                            
+                        </form>                        
+                    </div>
+                    <!--/module Project Management Profile-->
+                    
+                    <!--module Tech Inventory-->
+                    <div class="tab_con tab_techinve none">
+                        <form action="">
+                            
+                            
+                            
+                        </form>
+                    </div>
+                    <!--/module Tech Inventory-->
+                    
+                    <!--module Monthly Project Status Update-->
+                    <div class="tab_con tab_projstat none">
+                        <form action="">
+                            
+                        </form>
+                    </div>
+                    <!--/module Monthly Project Status Update-->
+                    
+                </div>
+                <!--/edit project-->
+                
+            </div>
+            <!-- / main content -->
+            
+            <!-- footer -->
+            <div class="footer clearfix">
+                <div class="wrap">
+                    <a href="homepage.html" class="logo">Company</a>
+                    <ul>
+                        <li><a href="">SSTC</a></li>
+                        <li><a href="">Atrack</a></li>
+                        <li><a href="">SSHOME</a></li>
+                        <li><a href="">LMS</a></li>
+                        <li><a href="">Support</a></li>
+                        <li><a href="">eBusiness</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- / footer -->
+            
+            <!-- fixed elements -->
+            <div class="fixed">
+                <a title="Go to top" class="btn to_top" href="javascript:;">Go to top</a>
+            </div>
+            <!-- / fixed elements -->	
+            
+            <!--mask of pop up window-->
+            <div id="pop_win_mask" class="pop_win_mask"></div>
+            <!-- pop up window -->
+            <div id="pop_win" class="pop_win">
+                <div class="pop_win_in_mask"></div>	 
+                  
+                <!--loading image, class 'none' = "display:none"-->
+                <div class="pop_win_in center pop_loading">           
+                    <img src="./images/pris_loading.gif" alt="loading" />
+                </div>
+                
+                <!--Saved Successfully--> 
+                <div class="pop_win_in tc pop_tip none">
+                    <p>Saved Successfully</p>
+                    <button type="button" class="pop_win_close flat_blue_btn">Ok</button>
+                </div>
+                
+                <!--team leader selector-->
+                <div id="pop_win_tls" class="pop_win_in pop_win_blue pop_win_tls">
+                    <h4></h4>
+                    <div class="tls_ipt js_tls_ipt">
+                        <input type="text" class="text" tip="Type at least 2 chars" />
+                        <button type="button" class="search_btn">Search</button>
+                    </div>
+                    <div class="tls js_tls clearfix">
+                        <!--tls_table-->
+                        <div class="tls_table js_table">
+                            <div class="in">
+                                 <table>
+                                    <thead>
+                                        <tr>
+                                            <th width="120px" data-type="text"><span class="tls_thSpan"><i class="sortIco"></i>ID</span></th>
+                                            <th width="140" data-type="text"><span class="tls_thSpan"><i class="sortIco"></i>Name</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>                           
+                        </div>  
+                        <!--/tls_table-->                      
+                        <div class="tls_btn js_tls_btn">
+                            <span class="to_r"></span>
+                            <span class="to_l"></span>
+                        </div>
+                        <div class="tls_result js_tls_result"></div>                        
+                    </div>
+                    <p class="tr mt">
+                        <button type="button" class="auto_c_btn cancel pop_win_close">Cancel</button>
+                        <button type="button" class="auto_c_btn prim sbmt">Ok</button>
+                    </p>
+                    <i class="closeIco pop_win_close"></i>
+                </div>
+                <!--/team leader selector-->
+                
+                <!--request for unlock-->
+                 <div id="pop_win_unlock" class="pop_win_in pop_win_unlock">
+                     <p class="tc js_message">Request for Unlock the Project</p>
+                     <p class="tc mt">
+                        <button class="auto_c_btn cancel pop_win_close" type="button">Cancel</button>
+                        <button class="auto_c_btn prim sbmt" type="button">Ok</button>
+                    </p>
+                 </div>
+                <!--/request for unlock-->
+            </div>
+            <!-- / pop up window -->
+            
+            <script type="text/javascript" src="./js/jQuery.1.7.2.min.js"></script>	
+            <script type="text/javascript" src="./js/underscore.js"></script>
+            <!--profile page js-->
+            <script type="text/javascript" src="./js/pris.js"></script>
+            <!--jquery validate-->
+            <script type="text/javascript" src="./js/jquery.validate.js"></script>
+            <script type="text/javascript" src="./js/jquery.validate.unobtrusive.js"></script>
+            <script type="text/javascript" src="./js/jquery.validate.unobtrusive.ext.js"></script>
+            <script type="text/javascript" src="./js/jquery.validate.ext.js"></script>
+            <!-- jquery ui -->
+            <script type="text/javascript" src="./js/plugins/jquery-ui/jquery.ui.min.js"></script>
+            <script type="text/javascript">
+                $(function(){
+                    fedPris.profile();
+                    // clean default value before submit form
+                    $('.js_sbmt_btn').click(function(){
+                        fedPris.clearIptDefaultVal();
+                    });
+                });
+            </script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,942 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Employee Profile</title>
+        <link rel="stylesheet" type="text/css" href="./css/base.css" />
+        <link rel="stylesheet" type="text/css" href="./css/pris.css" />
+        <!-- jQuery ui-->
+        <link rel="stylesheet" type="text/css" href="./css/plugins/jquery-ui/jquery.ui.min.css" />
+        <!--Jcrop-->
+        <link rel="stylesheet" type="text/css" href="./css/plugins/Jcrop/jquery.Jcrop.min.css" />
+    </head>
+    
+    <body>
+        <div class="pageWrapper">
+            <!-- top -->
+            <div class="top clearfix">
+                <div class="wrap">
+                    <a class="logo" href="">
+                        <img src="./images/logo.png" alt="Company" />
+                    </a>
+                    <img class="slogan" src="./images/slogan.png" alt="Company Hangzhou: Project Resource Information System (PRIS)" />
+                </div>
+            </div>
+            <!-- / top -->
+            <!-- nav -->
+            <div class="nav">
+                <div class="wrap">
+                    <ul class="clearfix">
+                        <!-- add class on, then that nav will be highlighted -->
+                        <li class="on">
+                            <a href="./">Homepage</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">My Staff</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="mystaff_bpo.html">BPO</a>
+                                </li>
+                                <li>
+                                    <a href="mystaff_ito.html">ITO</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">My Project</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="myproject_bpo.html">BPO</a>
+                                </li>
+                                <li>
+                                    <a href="myproject_ito.html">ITO</a>
+                                </li>
+                                <li>
+                                    <a href="myproject_pmo.html">PMO</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">Operation Service</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">Billing
+                                        <i></i>
+                                    </a>
+                                    <!-- third level menu -->
+                                    <ul>
+                                        <li>
+                                            <a href="billing_tl.html">Team Leader</a>
+                                        </li>
+                                        <li>
+                                            <a href="billing_pm.html">PM</a>
+                                        </li>
+                                        <li>
+                                            <a href="billing_pmo.html">PMO</a>
+                                        </li>
+                                    </ul>
+                                    <!-- / third level menu -->
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Invoice</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">Report Center</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">Executive Dashboard/Report</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Operational Report</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Atrack Customized report
+                                        <i></i>
+                                    </a>
+                                    <!-- third level menu -->
+                                    <ul>
+                                        <li>
+                                            <a href="structure_report_01_chart.html">Structure Report</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">Atrack Report</a>
+                                        </li>
+                                    </ul>
+                                    <!-- / third level menu -->
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Other</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- / nav -->
+            <!-- main content -->
+            <div class="main wrap clearfix">
+                <h3 class="pg_tit">My Profile</h3>
+                <div class="mod_white clearfix">
+                    <button class="black_btn fr" type="button">Print</button>
+                    <button class="js_sbmt_btn black_btn prim fr" type="button">Save</button>
+                    <a class="black_btn" href="http://pris/V2/">Return</a>
+                </div>
+                <!-- pg_profile-->
+                <div class="pg_profile">
+                    <h3>Basic Information (
+                        <b class="must_dot">*</b>Required)</h3>
+                    <!-- mod_input-->
+                    <div class="mod_input">
+                        <!-- mod_input_l-->
+                        <div class="mod_input_l">
+                            <div class="item clearfix">
+                                <label class="label" for="UID">Lan ID:</label>
+                                <input id="UID" class="text" disabled="disabled" type="text" value="888888" tip="enter lan id" />
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="EPNameCN">Chinese Name:</label>
+                                <input id="EPNameCN" class="text" disabled="disabled" type="text" value="大大大" tip="enter name" />
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="EPNameEN">English Name:</label>
+                                <input id="EPNameEN" class="text" disabled="disabled" type="text" value="Feng, Weixing" />
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="n_name">Nick Name:</label>
+                                <input id="n_name" class="text" type="text" tip="enter text" />
+                                <p class="field-validation-error">This is error message</p>
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="gender">Gender:</label>
+                                <select name="" id="gender">
+                                    <option value="female">female</option>
+                                    <option value="male">male</option>
+                                </select>
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="Birthdate">Birth Date:</label>
+                                <input id="Birthdate" class="text date_month" type="text" tip="enter date" />
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="GraduatedYear">
+                                    <b>*</b>Graduated Year:</label>
+                                <select name="" id="GraduatedYear">
+                                    <option value="2013">2013</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2009">2009</option>
+                                </select>
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="m_hr">Major HR:</label>
+                                <input id="m_hr" class="text" type="text" tip="enter text" />
+                            </div>
+                        </div>
+                        <!-- / mod_input_l-->
+                        <!-- mod_input_r-->
+                        <div class="mod_input_r">
+                            <div class="user_img">
+                                <img id="user_img" src="./temp/user_img.jpg" alt="user image" />
+                            </div>
+                            <!-- img upload simulate -->
+                            <div class="img_upload">
+                                <button id="up_btn" class="up_btn" type="button" data-title="no_tit_tip"><i class="uploadIco"></i>Browse</button>
+                            </div>
+                            <p id="up_erorMsg" class="up_erorMsg"></p>
+                            <!-- / img upload simulate -->
+                            <p class="upload_tip">120*140px,less than 200kb,Jpg. GIF. PNG. required.</p>
+                            <div class="item clearfix">
+                                <label class="label" for="Education">
+                                    <b>*</b>Degree:</label>
+                                <select name="" id="Education">
+                                    <option value="Bachelor">Bachelor</option>
+                                    <option value="Doctor">Doctor</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- / mod_input_r-->
+                    </div>
+                    <!-- / mod_input-->
+                    <!-- mod_input-->
+                    <div class="mod_input">
+                        <!-- mod_input_l-->
+                        <div class="mod_input_l">
+                            <div class="item clearfix">
+                                <label class="label" for="EnrollDate">Enroll Date:</label>
+                                <input id="EnrollDate" class="text" disabled="disabled" type="text" value="2012-10-09" />
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="resignDate">Resign Date:</label>
+                                <input id="resignDate" class="text" disabled="disabled" type="text" value="2013-10-09" />
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="bu">Business Unit:</label>
+                                <input id="bu" class="text input-validation-error" type="text" value="error" />
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="ResCate">Resource type:</label>
+                                <select name="" id="ResCate">
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                </select>
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="CCName">Cost Center:</label>
+                                <input id="CCName" class="text" disabled="disabled" type="text" title="1339001" value="1339001" />
+                            </div>
+                        </div>
+                        <!-- / mod_input_l-->
+                        <!-- mod_input_r-->
+                        <div class="mod_input_r">
+                            <div class="item clearfix">
+                                <label class="label" for="f_date">FTE Date:</label>
+                                <input id="f_date" class="text date_month" type="text" tip="enter date" />
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="TeamID">
+                                    <b>*</b>Team/Dept:</label>
+                                <input id="TeamID" class="text" type="text" tip="enter text" />
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="ServiceCategory">Service Category:</label>
+                                <select name="" id="ServiceCategory">
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                </select>
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="banding">Banding:</label>
+                                <select name="" id="banding">
+                                    <option value="banding1">banding1</option>
+                                    <option value="banding2">banding2</option>
+                                    <option value="banding3">banding3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- / mod_input_r-->
+                    </div>
+                    <!-- / mod_input-->
+                    <!-- mod_input-->
+                    <div class="mod_input">
+                        <!-- mod_input_l-->
+                        <div class="mod_input_l">
+                            <div class="item clearfix">
+                                <label class="label" for="Addr">Office Location:</label>
+                                <select name="" id="Addr">
+                                    <option value="HZ4">HZ4</option>
+                                    <option value="HZ5">HZ5</option>
+                                    <option value="HZ6">HZ6</option>
+                                </select>
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="l_loc">Live Location:</label>
+                                <input id="l_loc" class="text" type="text" tip="enter text" />
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="Tel">Office Tel:</label>
+                                <input id="Tel" class="text" type="text" tip="enter text" />
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="is_rev">Is Reviewer:</label>
+                                <input id="is_rev" class="checkbox" type="checkbox" />
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="c_tree">Call Tree Level:</label>
+                                <input id="c_tree" class="text" type="text" tip="enter text" />
+                            </div>
+                        </div>
+                        <!-- / mod_input_l-->
+                        <!-- mod_input_r-->
+                        <div class="mod_input_r">
+                            <div class="item clearfix">
+                                <label class="label" for="Seat">Seat:</label>
+                                <input id="Seat" class="text" type="text" tip="enter text" />
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="i_acc">Internet Access:</label>
+                                <input id="i_acc" class="checkbox" type="checkbox" />
+                            </div>
+                            <div class="item clearfix">
+                                <label class="label" for="mTel">Mobile Tel:</label>
+                                <input id="mTel" class="text" type="text" tip="enter text" />
+                            </div>
+                            <!-- blank -->
+                            <div class="item clearfix">
+                                <label class="label">&nbsp;</label>
+                                <input class="text hidden" type="text" tip="enter text" />
+                            </div>
+                            <!-- / blank -->
+                            <div class="item clearfix">
+                                <label class="label" for="c_tree_b">Call Tree Backup:</label>
+                                <input id="c_tree_b" class="text" type="text" tip="enter text" />
+                            </div>
+                        </div>
+                        <!-- / mod_input_r-->
+                    </div>
+                    <!-- / mod_input-->
+                </div>
+                <!-- / pg_profile-->
+                <!-- pg_profile-->
+                <div class="pg_profile">
+                    <h3>Summary (8000 characters)</h3>
+                    <div class="summary">
+                        <textarea name="" id="Summary" tip="enter text"></textarea>
+                    </div>
+                    <p class="upload_tip">provide a concise description of role in the team, major skill set, professional experience and education background</p>
+                </div>
+                <!-- / pg_profile-->
+                <form action="">
+                    <!-- pg_profile-->
+                    <div class="pg_profile" id="more_info">
+                        <h3>More Information</h3>
+                        <!-- mod_toggle -->
+                        <div id="work_expe" class="mod_toggle">
+                            <h4>
+                                <i title="add new record" class="newInfoIco"></i>
+                                <i class="addIco"></i>Working Experience</h4>
+                            <p class="upload_tip">Provide a detailed description of professional experience in a chronicle way and highlight time period, company name, role and major responsibility and contribution. start from the most recent experience.</p>
+                            <div class="toggle_con">
+                                <!-- mod_input-->
+                                <div class="mod_input">
+                                    <!-- mod_input_l-->
+                                    <div class="mod_input_l">
+                                        <div class="item clearfix">
+                                            <label class="label" for="WorkingExperiences_0__CompanyName">Company Name:</label>
+                                            <input id="WorkingExperiences_0__CompanyName" name="WorkingExperiences[0].CompanyName" class="text" type="text" tip="enter text" />
+                                            <p class="field-validation-error" data-valmsg-for="CompanyName[0].DurationFrom">
+                                                <span for="CompanyName_0__DurationFrom">The field DurationFrom must be a date.</span>
+                                            </p>
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="CompanyDept_0__CompanyName">Department:</label>
+                                            <!--if data-copy is 'yes', then reserve the value when copy it-->
+                                            <input id="CompanyDept_0__CompanyName" name="CompanyDept[0].CompanyName" class="text input-validation-error" type="text" tip="enter text" data-copy="yes" />
+                                            <p class="field-validation-valid" data-valmsg-for="Department[0].DurationFrom"></p>
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="CompanyEnrollDate">Duration:</label>
+                                            <input id="CompanyEnrollDate" class="text date_month" type="text" tip="enter text" data-copy="yes" />
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="CompanyExperience">Experience:</label>
+                                            <!--if data-copy is 'yes', then reserve the value when copy it-->
+                                            <textarea name="" id="CompanyExperience" tip="8000 Characters"></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- / mod_input_l-->
+                                    <!-- mod_input_r-->
+                                    <div class="mod_input_r">
+                                        <!-- blank -->
+                                        <div class="item clearfix">
+                                            <label class="label">&nbsp;</label>
+                                            <input class="text hidden" type="text" tip="enter text" />
+                                        </div>
+                                        <!-- / blank -->
+                                        <div class="item clearfix">
+                                            <label class="label" for="CompanyPosition">Position:</label>
+                                            <input id="CompanyPosition" class="text" type="text" tip="enter text" />
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="CompanyResignDate">To:</label>
+                                            <input id="CompanyResignDate" class="text date_month" type="text" tip="enter text" />
+                                        </div>
+                                    </div>
+                                    <!-- / mod_input_r-->
+                                    <i title="delete this record" class="delInfoIco"></i>
+                                </div>
+                                <!-- / mod_input-->
+                                <p class="upload_tip">Provide a detailed description of professional experience in a chronicle way and highlight time period, company name, role and major responsibility and contribution. start from the most recent experience.</p>
+                            </div>
+                        </div>
+                        <!-- / mod_toggle -->
+                        <!-- mod_toggle -->
+                        <div id="proj_expe" class="mod_toggle">
+                            <h4>
+                                <i title="add new record" class="newInfoIco"></i>
+                                <i class="addIco"></i>Project Experience</h4>
+                            <p class="upload_tip">Provide a list of Project that the employee has participated in.</p>
+                            <div class="toggle_con">
+                                <!-- mod_input-->
+                                <div class="mod_input">
+                                    <!-- mod_input_l-->
+                                    <div class="mod_input_l">
+                                        <div class="item clearfix">
+                                            <label class="label" for="PEName">Project Name:</label>
+                                            <input id="PEName" class="text" type="text" tip="enter text" />
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="PEStartDate">Duration:</label>
+                                            <input id="PEStartDate" class="text date_month" type="text" tip="enter text" />
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="PESoftwareEnvironment">Software:</label>
+                                            <input id="PESoftwareEnvironment" class="text" type="text" tip="enter text" />
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="PEDevelopingTools">Developing Tools:</label>
+                                            <input id="PEDevelopingTools" class="text" type="text" tip="enter text" />
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="PEDescription">Description:</label>
+                                            <textarea name="" id="PEDescription" tip="8000 Characters"></textarea>
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="PEResponsibility">Responsibility:</label>
+                                            <textarea name="" id="PEResponsibility" tip="8000 Characters"></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- / mod_input_l-->
+                                    <!-- mod_input_r-->
+                                    <div class="mod_input_r">
+                                        <!-- blank -->
+                                        <div class="item clearfix">
+                                            <label class="label">&nbsp;</label>
+                                            <input class="text hidden" type="text" tip="enter text" />
+                                        </div>
+                                        <!-- / blank -->
+                                        <div class="item clearfix">
+                                            <label class="label" for="PEEndDate">To:</label>
+                                            <input id="PEEndDate" class="text date_month" type="text" tip="enter text" />
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="PEHardwareEnvironment">Hardware:</label>
+                                            <input id="PEHardwareEnvironment" class="text" type="text" tip="enter text" />
+                                        </div>
+                                    </div>
+                                    <!-- / mod_input_r-->
+                                    <i title="delete this record" class="delInfoIco"></i>
+                                </div>
+                                <!-- / mod_input-->
+                                <p class="upload_tip">Provide a list of Project that the employee has participated in.</p>
+                            </div>
+                        </div>
+                        <!-- / mod_toggle -->
+                        <!-- mod_toggle -->
+                        <div id="it_skil" class="mod_toggle">
+                            <h4>
+                                <i title="add new record" class="newInfoIco"></i>
+                                <i class="addIco"></i>IT Skills</h4>
+                            <p class="upload_tip">Provide a concise description of skill set the employee has. There are four categories, i.e. System, Language, Platform and DBMS that he/she is familiar with and excels at.</p>
+                            <div class="toggle_con">
+                                <ul class="tab_tit clearfix">
+                                    <li>
+                                        <span>
+                                            <em>Project Management</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <em>Development</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <em>UI Design</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <em>Business Knowledge</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <em>Testing</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <em>Infra/Prod Support</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <em>Soft Skills</em>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <div class="tab_con mod_input">
+                                    <div class="item clearfix">
+                                        <label class="label">Tags:</label>
+                                        <span class="label_r">.Net, Java</span>
+                                    </div>
+                                    <div class="item clearfix">
+                                        <label class="label" for="pmKeys">Key:</label>
+                                        <input id="pmKeys" class="text" type="text" tip="Use comma(,) to seperate each key word." />
+                                    </div>
+                                </div>
+                                <div class="tab_con mod_input">
+                                    <div class="item clearfix">
+                                        <label class="label">Tags:</label>
+                                        <span class="label_r">Java, .Net, Java</span>
+                                    </div>
+                                    <div class="item clearfix">
+                                        <label class="label" for="devKeys">Key:</label>
+                                        <input id="devKeys" class="text" type="text" tip="Use comma(,) to seperate each key word." />
+                                    </div>
+                                </div>
+                                <div class="tab_con mod_input">
+                                    <div class="item clearfix">
+                                        <label class="label">Tags:</label>
+                                        <span class="label_r">Photoshop, .Net, Java</span>
+                                    </div>
+                                    <div class="item clearfix">
+                                        <label class="label" for="iaKeys">Key:</label>
+                                        <input id="iaKeys" class="text" type="text" tip="Use comma(,) to seperate each key word." />
+                                    </div>
+                                </div>
+                                <div class="tab_con mod_input">
+                                    <div class="item clearfix">
+                                        <label class="label">Tags:</label>
+                                        <span class="label_r">CSS, .Net, Java</span>
+                                    </div>
+                                    <div class="item clearfix">
+                                        <label class="label" for="baKeys">Key:</label>
+                                        <input id="baKeys" class="text" type="text" tip="Use comma(,) to seperate each key word." />
+                                    </div>
+                                </div>
+                                <div class="tab_con mod_input">
+                                    <div class="item clearfix">
+                                        <label class="label">Tags:</label>
+                                        <span class="label_r">JS, .Net, Java</span>
+                                    </div>
+                                    <div class="item clearfix">
+                                        <label class="label" for="qaKeys">Key:</label>
+                                        <input id="qaKeys" class="text" type="text" tip="Use comma(,) to seperate each key word." />
+                                    </div>
+                                </div>
+                                <div class="tab_con mod_input">
+                                    <div class="item clearfix">
+                                        <label class="label">Tags:</label>
+                                        <span class="label_r">HTML, .Net, Java</span>
+                                    </div>
+                                    <div class="item clearfix">
+                                        <label class="label" for="psKeys">Key:</label>
+                                        <input id="psKeys" class="text" type="text" tip="Use comma(,) to seperate each key word." />
+                                    </div>
+                                </div>
+                                <div class="tab_con mod_input">
+                                    <div class="item clearfix">
+                                        <label class="label">Tags:</label>
+                                        <span class="label_r">Node, .Net, Java</span>
+                                    </div>
+                                    <div class="item clearfix">
+                                        <label class="label" for="ssKeys">Key:</label>
+                                        <input id="ssKeys" class="text" type="text" tip="Use comma(,) to seperate each key word." />
+                                    </div>
+                                </div>
+                                <i title="delete this record" class="delInfoIco"></i>
+                                <p class="upload_tip">Provide a concise description of skill set the employee has. There are four categories, i.e. System, Language, Platform and DBMS that he/she is familiar with and excels at.</p>
+                            </div>
+                        </div>
+                        <!-- / mod_toggle -->
+                        <!-- mod_toggle -->
+                        <div id="train" class="mod_toggle">
+                            <h4>
+                                <i title="add new record" class="newInfoIco"></i>
+                                <i class="addIco"></i>Trainings</h4>
+                            <p class="upload_tip">Provide a list of training that the employee has attended.</p>
+                            <div class="toggle_con">
+                                <!-- mod_input-->
+                                <div class="mod_input">
+                                    <!-- mod_input_l-->
+                                    <div class="mod_input_l">
+                                        <div class="item clearfix">
+                                            <label class="label" for="TrainingName">Training Name:</label>
+                                            <input id="TrainingName" class="text" type="text" tip="enter text" />
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="TrainingInstitutions">Institutions:</label>
+                                            <input id="TrainingInstitutions" class="text" type="text" tip="enter text" />
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="TrainingDescription">Description:</label>
+                                            <textarea name="" id="TrainingDescription" tip="8000 Characters"></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- / mod_input_l-->
+                                    <i title="delete this record" class="delInfoIco"></i>
+                                </div>
+                                <!-- / mod_input-->
+                                <p class="upload_tip">Provide a list of training that the employee has attended.</p>
+                            </div>
+                        </div>
+                        <!-- / mod_toggle -->
+                        <!-- mod_toggle -->
+                        <div id="lang" class="mod_toggle">
+                            <h4>
+                                <i title="add new record" class="newInfoIco"></i>
+                                <i class="addIco"></i>Languages</h4>
+                            <p class="upload_tip">Provide a list of foreign language that the employee has studied.</p>
+                            <div class="toggle_con">
+                                <!-- mod_input-->
+                                <div class="mod_input">
+                                    <!-- mod_input_l-->
+                                    <div class="mod_input_l">
+                                        <div class="item clearfix">
+                                            <label class="label" for="LanguageName">Language:</label>
+                                            <input id="LanguageName" class="text" type="text" value="English" />
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label for="LanguageLevel" class="label">Level:</label>
+                                            <select id="LanguageLevel" name="LanguageLevel">
+                                                <option value=""></option>
+                                                <option value="Basic">Basic</option>
+                                                <option value="Average">Average</option>
+                                                <option value="Proficient">Proficient</option>
+                                                <option value="Expert">Expert</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- / mod_input_l-->
+                                    <i title="delete this record" class="delInfoIco"></i>
+                                </div>
+                                <!-- / mod_input-->
+                                <p class="upload_tip">Provide a list of foreign language that the employee has studied.</p>
+                            </div>
+                        </div>
+                        <!-- / mod_toggle -->
+                        <!-- mod_toggle -->
+                        <div id="edu" class="mod_toggle">
+                            <h4>
+                                <i title="add new record" class="newInfoIco"></i>
+                                <i class="addIco"></i>Educations (
+                                <b class="must_dot">*</b>Required)</h4>
+                            <p class="upload_tip">Provide a concise description of education background the employee has received. Start from the most recent experience.</p>
+                            <div class="toggle_con">
+                                <!-- mod_input-->
+                                <div class="mod_input">
+                                    <!-- mod_input_l-->
+                                    <div class="mod_input_l">
+                                        <div class="item clearfix">
+                                            <label class="label" for="EduCollege">
+                                                <b>*</b>College:</label>
+                                            <input id="EduCollege" class="text" type="text" tip="enter text" />
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="EduMajor">
+                                                <b>*</b>Major:</label>
+                                            <input id="EduMajor" class="text" type="text" tip="enter text" />
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="EduStartDate">Duration:</label>
+                                            <input id="EduStartDate" class="text date_month" type="text" tip="enter text" />
+                                        </div>
+                                    </div>
+                                    <!-- / mod_input_l-->
+                                    <!-- mod_input_r-->
+                                    <div class="mod_input_r">
+                                        <!-- blank -->
+                                        <div class="item clearfix">
+                                            <label class="label">&nbsp;</label>
+                                            <input class="text hidden" type="text" tip="enter text" />
+                                        </div>
+                                        <!-- / blank -->
+                                        <div class="item clearfix">
+                                            <label for="EduDegree" class="label">
+                                                <b>*</b>Degree:</label>
+                                            <select id="EduDegree" name="EduDegree">
+                                                <option value=""></option>
+                                                <option value="Others">Others</option>
+                                                <option value="Associate">Associate</option>
+                                                <option value="Bachelor">Bachelor</option>
+                                                <option value="Master">Master</option>
+                                                <option value="PHD">PHD</option>
+                                            </select>
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="EduEndDate">To:</label>
+                                            <input id="EduEndDate" class="text date_month" type="text" tip="enter text" />
+                                        </div>
+                                    </div>
+                                    <!-- / mod_input_r-->
+                                    <i title="delete this record" class="delInfoIco"></i>
+                                </div>
+                                <!-- / mod_input-->
+                                <p class="upload_tip">Provide a concise description of education background the employee has received. Start from the most recent experience.</p>
+                            </div>
+                        </div>
+                        <!-- / mod_toggle -->
+                        <!-- mod_toggle -->
+                        <div id="certificate" class="mod_toggle">
+                            <h4>
+                                <i title="add new record" class="newInfoIco"></i>
+                                <i class="addIco"></i>Certificates</h4>
+                            <p class="upload_tip">Provide a list of certification that may reflect the employee' s competency and capability.</p>
+                            <div class="toggle_con">
+                                <!-- mod_input-->
+                                <div class="mod_input">
+                                    <!-- mod_input_l-->
+                                    <div class="mod_input_l">
+                                        <div class="item clearfix">
+                                            <label class="label" for="CertificateName">Certificate:</label>
+                                            <input id="CertificateName" class="text" type="text" tip="enter text" />
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="CertificateReceivedDate">ReceivingDate:</label>
+                                            <input id="CertificateReceivedDate" class="text" type="text" tip="enter text" />
+                                        </div>
+                                        <div class="item clearfix">
+                                            <label class="label" for="CertificateDescription">Note:</label>
+                                            <textarea name="CertificateDescription" id="CertificateDescription" tip="8000 Characters"></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- / mod_input_l-->
+                                    <i title="delete this record" class="delInfoIco"></i>
+                                </div>
+                                <!-- / mod_input-->
+                                <p class="upload_tip">Provide a list of certification that may reflect the employee' s competency and capability.</p>
+                            </div>
+                        </div>
+                        <!-- / mod_toggle -->
+                    </div>
+                    <!-- / pg_profile-->
+                </form>
+                <div class="mod_white clearfix">
+                    <button class="black_btn fr" type="button">Print</button>
+                    <button class="js_sbmt_btn black_btn prim fr" type="button">Save</button>
+                    <a class="black_btn" href="http://pris/V2/">Return</a>
+                </div>
+            </div>
+            <!-- / main content -->
+            <!-- footer -->
+            <div class="footer clearfix">
+                <div class="wrap">
+                    <a href="homepage.html" class="logo">Company</a>
+                    <ul>
+                        <li>
+                            <a href="">SSTC</a>
+                        </li>
+                        <li>
+                            <a href="">Atrack</a>
+                        </li>
+                        <li>
+                            <a href="">SSHOME</a>
+                        </li>
+                        <li>
+                            <a href="">LMS</a>
+                        </li>
+                        <li>
+                            <a href="">Support</a>
+                        </li>
+                        <li>
+                            <a href="">eBusiness</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- / footer -->
+            
+            <!-- fixed elements -->
+            <div class="fixed">
+                <a title="Go to top" class="btn to_top" href="javascript:;">Go to top</a>
+            </div>
+            <!-- / fixed elements -->
+            
+            <!--mask of pop up window-->
+            <div id="pop_win_mask" class="pop_win_mask"></div>
+            <!-- pop up window -->
+            <div id="pop_win" class="pop_win">
+                <div class="pop_win_in_mask"></div>
+                <!--loading image, class 'none'=" display:none"-->
+                <div class="pop_win_in center pop_loading">
+                    <img src="./images/pris_loading.gif" alt="loading" />
+                </div>
+                <!--Saved Successfully-->
+                <div class="pop_win_in center pop_tip none">
+                    <p>Saved Successfully</p>
+                    <p>Saved Successfully</p>
+                    <p>Saved Successfully</p>
+                    <p>Saved Successfully</p>
+                    <p>Saved Successfully</p>
+                    <p>Saved Successfully</p>
+                    <p>Saved Successfully</p>
+                    <p>Saved Successfully</p>
+                    <p>Saved Successfully</p>
+                    <p>Saved Successfully</p>
+                    <p>Saved Successfully</p>
+                    <p>Saved Successfully</p>
+                    <p>Saved Successfully</p>
+                    <p>Saved Successfully</p>
+                    <p>Saved Successfully</p>
+                    <p>Saved Successfully</p>
+                    <p>Saved Successfully</p>
+                    <button type="button" class="pop_win_close flat_blue_btn">Ok</button>
+                </div>
+                <!--image crop-->
+                <div id="pop_crop" class="pop_win_in pop_crop">
+                    <div class="panel clearfix">
+                        <form id="myAcctPhotoForm" action="#">
+                            <div class="leftCol fl">
+                                <div class="editPhotoArea"></div>
+                            </div>
+                            <div class="previewPhotoArea fl">
+                                <img id="previewImg" src="./images/photo-preview.png" alt="" />
+                            </div>
+                            <div class="getImgSizeWrapper">
+                                <img id="getImgSize" src="./temp/jcrop-sample.jpg" alt="" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="saveBtnWrapper clearfix">
+                        <a class="upBtn jsSavePhotoBtn fr" href="javascript:;">SAVE</a>
+                        <a class="jsDiscardLink pop_win_close fr" href="javascript:;">Cancel</a>
+                    </div>
+                </div>
+                <!--/image crop-->
+            </div>
+            <!-- / pop up window -->
+            
+            <script type="text/javascript" src="./js/jQuery.1.7.2.min.js"></script>
+            <script type="text/javascript" src="./js/underscore.js"></script>
+            <!--profile page js-->
+            <script type="text/javascript" src="./js/pris.js"></script>
+            <!--jquery validate-->
+            <script type="text/javascript" src="./js/jquery.validate.js"></script>
+            <script type="text/javascript" src="./js/jquery.validate.unobtrusive.js"></script>
+            <script type="text/javascript" src="./js/jquery.validate.unobtrusive.ext.js"></script>
+            <script type="text/javascript" src="./js/jquery.validate.ext.js"></script>
+            <!-- jquery ui -->
+            <script type="text/javascript" src="./js/plugins/jquery-ui/jquery.ui.core.min.js"></script>
+            <script type="text/javascript" src="./js/plugins/jquery-ui/jquery.ui.datepicker.min.js"></script>
+            <!--Jcrop-->
+            <script type="text/javascript" src="./js/plugins/Jcrop/jquery.Jcrop.min.js"></script>
+            <!--SimpleAjaxUploader-->
+            <script type="text/javascript" src="./js/plugins/SimpleAjaxUploader/SimpleAjaxUploader.min.js"></script>
+            <script type="text/javascript">
+                $(function() {
+                    fedPris.profile();
+                    
+                    $("form").data("validator").settings.submitHandler = function (form) {
+                        fedPris.popWinShow({
+                                id: ".pop_loading",
+                                maskOut: true,
+                                maskIn: true
+                            });
+                        form.submit();
+                    };
+        
+                    var uploader = new ss.SimpleUpload({
+                        button: 'up_btn',
+                        url: '/UAT/Profile/UploadPortrait',
+                        name: 'portrait',
+                        multipart: true,
+                        maxSize: 200,
+                        allowedExtensions: ['jpg', 'jpeg', 'png', 'gif'],
+                        accept: 'image/*',                
+                        onSubmit: function () {
+                            fedPris.clickBrowse(); // click and browse
+                        },
+                        onComplete: function (file, response) {
+                            response = $.parseJSON(response);
+                            if (response.success) {
+                                fedPris.getImgUrlFromServer(response.path);
+                            } else {
+                                $('#up_erorMsg').text(response.message);
+                            }
+                        },
+                        // when image extension error
+                        onExtError: function(){
+                            fedPris.clickBrowse('extError');
+                        },
+                         // when image size error
+                        onSizeError: function(){
+                            fedPris.clickBrowse('sizeError');
+                        },
+                         // when image uploaded error
+                        onError: function(){
+                            fedPris.clickBrowse('error');
+                        }
+                    });
+        
+                    $(".jsSavePhotoBtn").click(function () {
+                        if (!window.jcropApi) {
+                            alert("Processing image, please wait");
+                            return false;
+                        }
+                        var aHeight = $("#getImgSize").height();
+                        var dHeight = $("#userImg").height();
+                        var ratio = aHeight / dHeight;       
+                            
+                        var data = {
+                            x : parseInt((ratio * window.jcropApi.tellSelect().x), 10),
+                            y: parseInt((ratio * window.jcropApi.tellSelect().y), 10),
+                            w: parseInt((ratio * window.jcropApi.tellSelect().w), 10),
+                            h: parseInt((ratio * window.jcropApi.tellSelect().h), 10)
+                        };
+        
+                        $.post("/UAT/Profile/StretchPortrait",data,function(result){
+                            if(result.success){
+                                $("#user_img").attr("src",result.path);
+                                $(".jsDiscardLink").click();
+                            }else{
+                                alert(result.message);
+                            }
+                        })
+                    });
+                    
+                    // submit form and clean default value
+                    $('.js_sbmt_btn').click(function() {
+                        fedPris.clearIptDefaultVal();
+                    });
+                });
+            </script>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,132 @@
+[
+    {
+        "uid": "63961",
+        "begins": "2014-01-02 10:00:00",
+        "ends": "2014-01-02 11:00:00",
+        "resource": 123,
+        "notes": "",
+        "title": "Wang, Xiaolu",
+        "eid": "513444",
+        "meetingRoomId": 45
+    },
+    {
+        "uid": "14963",
+        "begins": "2014-01-02 10:30:00",
+        "ends": "2014-01-02 11:00:00",
+        "resource": 122,
+        "notes": "",
+        "title": "Gu, Renxiang",
+        "eid": "515353",
+        "meetingRoomId": 44
+    },
+    {
+        "uid": "14964",
+        "begins": "2014-01-02 14:00:00",
+        "ends": "2014-01-02 14:30:00",
+        "resource": 123,
+        "notes": "",
+        "title": "Gu, Renxiang",
+        "eid": "515353",
+        "meetingRoomId": 45
+    },
+    {
+        "uid": "91248",
+        "begins": "2014-01-02 15:00:00",
+        "ends": "2014-01-02 16:30:00",
+        "resource": 123,
+        "notes": "",
+        "title": "Zhou, Jie Fiona",
+        "eid": "500510",
+        "meetingRoomId": 45
+    },
+    {
+        "uid": "88170",
+        "begins": "2014-01-02 15:00:00",
+        "ends": "2014-01-02 17:00:00",
+        "resource": 114,
+        "notes": "",
+        "title": "Zhao, Jiasu",
+        "eid": "533421",
+        "meetingRoomId": 91
+    },
+    {
+        "uid": "52062",
+        "begins": "2014-01-02 16:00:00",
+        "ends": "2014-01-02 17:00:00",
+        "resource": 118,
+        "notes": "Ad Hoc Review",
+        "title": "Ren, Sen",
+        "eid": "526223",
+        "meetingRoomId": 33
+    },
+    {
+        "uid": "48514",
+        "begins": "2014-01-02 16:00:00",
+        "ends": "2014-01-02 17:30:00",
+        "resource": 117,
+        "notes": "FR training",
+        "title": "Pan, Xiaojie",
+        "eid": "536209",
+        "meetingRoomId": 90
+    },
+    {
+        "uid": "11761",
+        "begins": "2014-01-02 16:30:00",
+        "ends": "2014-01-02 17:00:00",
+        "resource": 123,
+        "notes": "",
+        "title": "Fan, Ye",
+        "eid": "558104",
+        "meetingRoomId": 45
+    },
+    {
+        "uid": "49598",
+        "begins": "2014-01-02 18:00:00",
+        "ends": "2014-01-02 20:00:00",
+        "resource": 116,
+        "notes": "tmc",
+        "title": "Qi, Hongdan",
+        "eid": "551144",
+        "meetingRoomId": 89
+    },
+    {
+        "uid": "79070",
+        "begins": "2014-01-02 18:00:00",
+        "ends": "2014-01-02 20:00:00",
+        "resource": 115,
+        "notes": "",
+        "title": "Yin, Dan",
+        "eid": "519603",
+        "meetingRoomId": 42
+    },
+    {
+        "uid": "79087",
+        "begins": "2014-01-02 18:00:00",
+        "ends": "2014-01-02 20:00:00",
+        "resource": 114,
+        "notes": "",
+        "title": "Yin, Dan",
+        "eid": "519603",
+        "meetingRoomId": 91
+    },
+    {
+        "uid": "36665",
+        "begins": "2014-01-02 18:00:00",
+        "ends": "2014-01-02 20:30:00",
+        "resource": 118,
+        "notes": "",
+        "title": "Lin, Shirong",
+        "eid": "525488",
+        "meetingRoomId": 33
+    },
+    {
+        "uid": "36666",
+        "begins": "2014-01-02 18:00:00",
+        "ends": "2014-01-02 20:30:00",
+        "resource": 117,
+        "notes": "",
+        "title": "Lin, Shirong",
+        "eid": "525488",
+        "meetingRoomId": 90
+    }
+]

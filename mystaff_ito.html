@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>My Staff ITO</title>
+        <link rel="stylesheet" type="text/css" href="./css/base.css" />
+        <link rel="stylesheet" type="text/css" href="./css/pris.css" />
+    </head>
+    
+    <body>
+        <div class="pageWrapper">
+            <!-- top -->
+            <div class="top clearfix">
+                <div class="wrap">
+                    <a class="logo" href="">
+                        <img src="./images/logo.png" alt="Company" />
+                    </a>
+                    <img class="slogan" src="./images/slogan.png" alt="Company Hangzhou: Project Resource Information System (PRIS)" />
+                </div>
+            </div>
+            <!-- / top -->
+            <!-- nav -->
+            <div class="nav">
+                <div class="wrap">
+                    <ul class="clearfix">
+                        <!-- add class on, then that nav will be highlighted -->
+                        <li>
+                            <a href="./">Homepage</a>
+                        </li>
+                        <li class="on">
+                            <a href="javascript:;">My Staff</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="mystaff_bpo.html">BPO</a>
+                                </li>
+                                <li>
+                                    <a href="mystaff_ito.html">ITO</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">My Project</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="myproject_bpo.html">BPO</a>
+                                </li>
+                                <li>
+                                    <a href="myproject_ito.html">ITO</a>
+                                </li>
+                                <li>
+                                    <a href="myproject_pmo.html">PMO</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">Operation Service</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">Billing
+                                        <i></i>
+                                    </a>
+                                    <!-- third level menu -->
+                                    <ul>
+                                        <li>
+                                            <a href="billing_tl.html">Team Leader</a>
+                                        </li>
+                                        <li>
+                                            <a href="billing_pm.html">PM</a>
+                                        </li>
+                                        <li>
+                                            <a href="billing_pmo.html">PMO</a>
+                                        </li>
+                                    </ul>
+                                    <!-- / third level menu -->
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Invoice</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                        <li>
+                            <a href="javascript:;">Report Center</a>
+                            <!-- second level menu -->
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">Executive Dashboard/Report</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Operational Report</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Atrack Customized report
+                                        <i></i>
+                                    </a>
+                                    <!-- third level menu -->
+                                    <ul>
+                                        <li>
+                                            <a href="structure_report_01_chart.html">Structure Report</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">Atrack Report</a>
+                                        </li>
+                                    </ul>
+                                    <!-- / third level menu -->
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Other</a>
+                                </li>
+                            </ul>
+                            <!-- / second level menu -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- / nav -->
+            <!-- main content -->
+            <div class="main wrap">
+                <div class="staff_pie clearfix">
+                    <div class="pie_in" id="left_pie" data-source-resoByTit="./js/json/staff_resouce_title.json">
+                        <img class="img_loading" alt="loading" src="./images/pris_loading.gif" />
+                    </div>
+                    <div class="pie_in" id="right_pie" data-source-reso="./js/json/staff_resouce.json">
+                        <img class="img_loading" alt="loading" src="./images/pris_loading.gif" />
+                    </div>
+                </div>
+                <div class="atrack_chart">
+                    <button id="chartBack_btn" class="black_btn back_btn">Back</button>
+                    <div class="plot_band">
+                        <span>Working Hours (h)</span>
+                    </div>
+                    <!-- 
+                        data-source-atrack: get default data when page loading
+                        data-souce-getPerson: get more staff data by this person's eid when click each leader's name
+                    -->
+                    <div id="atrack_chart" class="pie_in" data-source-atrack="./js/json/staff_ito_leader.json" data-souce-getPerson = "./js/json/staff_ito.json">
+                        <img class="img_loading" alt="loading" src="./images/pris_loading.gif" />
+                    </div>
+                </div>
+                <!-- table -->
+                <div class="staff_table_action tr">
+                    <a href="javascript:;" class="act_edit"><i class="penIco"></i>Edit</a>
+                    <p class="act_more">
+                        <button class="act_cancel black_btn" type="button"><i class="xIco"></i>Cancel</button>
+                        <button class="black_btn prim" type="button"><i class="saveIco"></i>Save</button>
+                    </p>
+                </div>
+                <table id="staff_table" class="staff_table">
+                    <thead>
+                        <tr>
+                            <!-- if the column need to be sorted, then should add property 'data-type' -->
+                            <th rowspan="2" data-type="text">Name/ID</th>
+                            <th rowspan="2" data-type="text">Cost Center</th>
+                            <th rowspan="2" data-type="text">Project</th>
+                            <th colspan="13">OT Hours</th>
+                        </tr>
+                        <tr>
+                            <th>Jan</th>
+                            <th>Feb</th>
+                            <th>Mar</th>
+                            <th>Apr</th>
+                            <th>May</th>
+                            <th>Jun</th>
+                            <th>Jul</th>
+                            <th>Aug</th>
+                            <th>Sep</th>
+                            <th>Oct</th>
+                            <th>Nov</th>
+                            <th>Des</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Li, Hong/P548597</td>
+                            <td>3548597</td>
+                            <td>
+                                <!-- select project -->
+                                <div class="edit_proj">
+                                    <span class="proj_slcted">A2J</span>
+                                    <div class="proj_slct">
+                                        <select name="" id="">
+                                            <option value="A2J">A2J</option>
+                                            <option value="A3J">A3J</option>
+                                            <option value="A4J">A4J</option>
+                                            <option value="A5J">A5J</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- / select project -->
+                            </td>
+                            <td>176</td>
+                            <td>160</td>
+                            <td>177</td>
+                            <td>8</td>
+                            <td>99</td>
+                            <td>120</td>
+                            <td>30</td>
+                            <td>99</td>
+                            <td>66</td>
+                            <td>63</td>
+                            <td>80</td>
+                            <td>64</td>
+                            <td class="total">237</td>
+                        </tr>
+                        <tr>
+                            <td>Qi, Hong/P548597</td>
+                            <td>1548597</td>
+                            <td>
+                               <!-- select project -->
+                              <div class="edit_proj">
+                                  <span class="proj_slcted">A2J</span>
+                                  <div class="proj_slct">
+                                      <select name="" id="">
+                                          <option value="A2J">A2J</option>
+                                          <option value="A3J">A3J</option>
+                                          <option value="A4J">A4J</option>
+                                          <option value="A5J">A5J</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <!-- / select project -->
+                            </td>
+                            <td>171</td>
+                            <td>160</td>
+                            <td>177</td>
+                            <td>8</td>
+                            <td>99</td>
+                            <td>120</td>
+                            <td>30</td>
+                            <td>99</td>
+                            <td>66</td>
+                            <td>63</td>
+                            <td>80</td>
+                            <td>64</td>
+                            <td class="total">137</td>
+                        </tr>
+                        <tr>
+                            <td>AQi, Hong/P548597</td>
+                            <td>1548597</td>
+                            <td>
+                               <!-- select project -->
+                              <div class="edit_proj">
+                                  <span class="proj_slcted">A2J</span>
+                                  <div class="proj_slct">
+                                      <select name="" id="">
+                                          <option value="A2J">A2J</option>
+                                          <option value="A3J">A3J</option>
+                                          <option value="A4J">A4J</option>
+                                          <option value="A5J">A5J</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <!-- / select project -->
+                            </td>
+                            <td>171</td>
+                            <td>160</td>
+                            <td>177</td>
+                            <td>8</td>
+                            <td>99</td>
+                            <td>120</td>
+                            <td>30</td>
+                            <td>99</td>
+                            <td>66</td>
+                            <td>63</td>
+                            <td>80</td>
+                            <td>64</td>
+                            <td class="total">337</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- / table -->
+            </div>
+            <!-- / main content -->
+            <!-- footer -->
+            <div class="footer">
+                <div class="wrap clearfix">
+                    <a href="homepage.html" class="logo">Company</a>
+                    <ul>
+                        <li>
+                            <a href="">SSTC</a>
+                        </li>
+                        <li>
+                            <a href="">Atrack</a>
+                        </li>
+                        <li>
+                            <a href="">SSHOME</a>
+                        </li>
+                        <li>
+                            <a href="">LMS</a>
+                        </li>
+                        <li>
+                            <a href="">Support</a>
+                        </li>
+                        <li>
+                            <a href="">eBusiness</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- / footer -->
+            <!-- fixed elements -->
+            <div class="fixed">
+                <a title="Go to top" class="btn to_top" href="javascript:;">Go to top</a>
+            </div>
+            <!-- / fixed elements -->
+            <script type="text/javascript" src="./js/jQuery.1.7.2.min.js"></script>
+            <script type="text/javascript" src="./js/pris.js"></script>
+            <!-- hightcharts -->
+            <script type="text/javascript" src="./js/plugins/highcharts/highcharts.js"></script>
+            <script type="text/javascript">
+                $(function() {
+                    
+                    fedPris.staff();
+                    
+                    // left and right pie start
+                    var leftStaffPieData = $('#left_pie').attr('data-source-resoByTit'),
+                        rightStaffPieData = $('#right_pie').attr('data-source-reso'),
+                        leftStaffPieChart,
+                        rightStaffPieChart,
+                        staffPieOption = {
+                            chart: {
+                                renderTo: '',
+                                type: 'pie',
+                                width: 460,
+                                height: 340,
+                                marginTop: 5,
+                                borderRadius: 0,
+                                marginBottom: -30
+                            },
+                            credits: {
+                                enabled: false
+                            },
+                            colors: prisGCfg.chartColor,
+                            title: {
+                                text: '',
+                                align: 'left',
+                                x: 30
+                            },
+                            plotOptions: {
+                                pie: {
+                                    cursor: 'pointer',
+                                    showInLegend: true,
+                                    innerSize: '75%',
+                                    dataLabels: {
+                                        distance: -20,
+                                        color: 'white',
+                                        formatter: function() {
+                                            return this.y + '%';
+                                        }
+                                    }
+                                }
+                            },
+                            legend: {
+                                width: 150,
+                                align: 'right',
+                                verticalAlign: 'top',
+                                y: 60,
+                                borderWidth: 0,
+                                useHTML: true,
+                                labelFormatter: function() {
+                                    return '<div style="width:150px; margin-left:5px;">' + this.name + ":" + this.y + '%</div>';
+                                },
+                                itemStyle: {
+                                    height: '22px'
+                                }
+                            },
+                            tooltip: {
+                                pointFormat: '<b>{point.y} %</b>'
+                            },
+                            series: [{}]
+                        }
+
+                        // render left pie
+                    $.getJSON(leftStaffPieData, function(data) {
+                        staffPieOption.chart.renderTo = 'left_pie';
+                        staffPieOption.series = data;
+                        staffPieOption.title.text = 'Resource Allocation by Title';
+                        leftStaffPieChart = new Highcharts.Chart(staffPieOption);
+                    });
+                        // render right pie
+                    $.getJSON(rightStaffPieData, function(data) {
+                        staffPieOption.chart.renderTo = 'right_pie';
+                        staffPieOption.series = data;
+                        staffPieOption.title.text = 'Resource Allocation by Category';
+                        rightStaffPieChart = new Highcharts.Chart(staffPieOption);
+                    });
+                    // left and right pie end
+                });
+            </script>
+        </div>
+    </body>
+    
+</html>

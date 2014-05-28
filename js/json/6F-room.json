@@ -1,0 +1,45 @@
+{
+
+    "resource": {
+        "36": "Mu Du 木渎",
+        "37": "Ping Yao 平遥",
+        "38": "Li Jiang 丽江",
+        "39": "Wu Yuan 婺源",
+        "40": "Nan Xun 南浔",
+        "41": "Tong Li 同里",
+        "42": "Zhou Zhuang 周庄",
+        "43": "Wu Zhen 乌镇",
+        "44": "Hong Cun 宏村",
+        "45": "Xi Tang 西塘",
+		"4": "3F-K11",
+"5": "3F-Q11",
+"8": "4F-B11 Manger Office",
+"19": "J2-5F-A25",
+"25": "J2-5F-A21",
+"26": "J2-5F-A24",
+"34": "4F-K11 Manager Office",
+"35": "4F-O11 Manager Office",
+"36": "4F-Q11 Manager Office"
+    },
+    "meetingRoomId": [
+        68,
+        69,
+        83,
+        84,
+        53,
+        55,
+        67,
+        99,
+        101,
+        52,
+		88,
+93,
+54,
+38,
+71,
+72,
+29,
+34
+    ]
+
+}
