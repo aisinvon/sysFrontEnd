@@ -1,0 +1,18 @@
+{
+                "resource": {
+                    "46": "Shanghai",
+                    "47": "Kansas",
+                    "48": "Cambridge",
+                    "49": "Grafton",
+                    "51": "PublicGarden",
+                    "52": "Westborough",
+                    "54": "Milton",
+                    "55": "Westwood",
+                    "57": "Hong Kong",
+                    "105": "Westwood1",
+                    "106": "Westwood2",
+                    "107": "Westwood3",
+                    "108": "Westwood4"
+                },
+                "meetingRoomId": [4, 10, 32, 13, 6, 15, 11, 14, 1, 8, 88, 888, 8888]
+            }

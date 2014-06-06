@@ -2,9 +2,9 @@
 <html>
     
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <title>My Staff ITO</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="./css/base.css" />
         <link rel="stylesheet" type="text/css" href="./css/pris.css" />
     </head>
@@ -15,9 +15,9 @@
             <div class="top clearfix">
                 <div class="wrap">
                     <a class="logo" href="">
-                        <img src="./images/logo.png" alt="Company" />
+                        <img src="./images/logo.png" alt="STATE STREET" />
                     </a>
-                    <img class="slogan" src="./images/slogan.png" alt="Company Hangzhou: Project Resource Information System (PRIS)" />
+                    <img class="slogan" src="./images/slogan.png" alt="State Street Hangzhou: Project Resource Information System (PRIS)" />
                 </div>
             </div>
             <!-- / top -->
@@ -123,6 +123,7 @@
             <!-- / nav -->
             <!-- main content -->
             <div class="main wrap">
+                <input type="hidden" id="api_prefix" value="/Test/api/" />
                 <div class="staff_pie clearfix">
                     <div class="pie_in" id="left_pie" data-source-resoByTit="./js/json/staff_resouce_title.json">
                         <img class="img_loading" alt="loading" src="./images/pris_loading.gif" />
@@ -282,7 +283,7 @@
             <!-- footer -->
             <div class="footer">
                 <div class="wrap clearfix">
-                    <a href="homepage.html" class="logo">Company</a>
+                    <a href="homepage.html" class="logo">STATE STREET</a>
                     <ul>
                         <li>
                             <a href="">SSTC</a>
@@ -315,11 +316,12 @@
             <script type="text/javascript" src="./js/pris.js"></script>
             <!-- hightcharts -->
             <script type="text/javascript" src="./js/plugins/highcharts/highcharts.js"></script>
+            <script type="text/javascript" src="./js/plugins/highcharts/modules/exporting.js"></script>
             <script type="text/javascript">
                 $(function() {
                     
                     fedPris.staff();
-                    
+
                     // left and right pie start
                     var leftStaffPieData = $('#left_pie').attr('data-source-resoByTit'),
                         rightStaffPieData = $('#right_pie').attr('data-source-reso'),
@@ -336,6 +338,9 @@
                                 marginBottom: -30
                             },
                             credits: {
+                                enabled: false
+                            },
+                            exporting: {
                                 enabled: false
                             },
                             colors: prisGCfg.chartColor,
@@ -379,19 +384,34 @@
                         }
 
                         // render left pie
-                    $.getJSON(leftStaffPieData, function(data) {
-                        staffPieOption.chart.renderTo = 'left_pie';
-                        staffPieOption.series = data;
-                        staffPieOption.title.text = 'Resource Allocation by Title';
-                        leftStaffPieChart = new Highcharts.Chart(staffPieOption);
-                    });
+                        $.getJSON(leftStaffPieData, function(data) {
+                            var leftOpt = staffPieOption;
+
+                            leftOpt.chart.renderTo = 'left_pie';
+                            leftOpt.series = data;
+                            leftOpt.title.text = 'Resource Allocation by Title';
+                            leftStaffPieChart = new Highcharts.Chart(leftOpt);
+
+                            if (fedPris.oldIE()) {
+                                var svgData = leftStaffPieChart.getSVG();
+                                fedPris.fixHighchartForIE(leftOpt.chart.renderTo, svgData);
+                            }
+                        });
+
                         // render right pie
-                    $.getJSON(rightStaffPieData, function(data) {
-                        staffPieOption.chart.renderTo = 'right_pie';
-                        staffPieOption.series = data;
-                        staffPieOption.title.text = 'Resource Allocation by Category';
-                        rightStaffPieChart = new Highcharts.Chart(staffPieOption);
-                    });
+                        $.getJSON(rightStaffPieData, function(data) {
+                            var rightOpt = staffPieOption;
+
+                            rightOpt.chart.renderTo = 'right_pie';
+                            rightOpt.series = data;
+                            rightOpt.title.text = 'Resource Allocation by Category';
+                            rightStaffPieChart = new Highcharts.Chart(rightOpt);
+
+                            if (fedPris.oldIE()) {
+                                var svgData = rightStaffPieChart.getSVG();
+                                fedPris.fixHighchartForIE(rightOpt.chart.renderTo, svgData);
+                            }
+                        });
                     // left and right pie end
                 });
             </script>

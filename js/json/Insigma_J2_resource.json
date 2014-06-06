@@ -1,0 +1,16 @@
+{
+                "resource": {
+                    "28": "Quincy",
+                    "30": "Princeton",
+                    "31": "NewYork",
+                    "32": "London",
+                    "33": "Tokyo",
+                    "34": "Luxembourg",
+                    "35": "Munich",
+                    "36": "Taipei",
+                    "38": "Frankfurt",
+                    "40": "Hangzhou",
+                    "41": "Beijing"
+                },
+                "meetingRoomId": [17, 25, 24, 23, 21, 22, 20, 18, 19, 7, 16]
+            }

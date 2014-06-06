@@ -479,6 +479,12 @@ Array.prototype.remove = function(val) {
  * all pages function
  */
 var fedPris = {
+    // ie is lt ie9 or not, return true or false
+    oldIE: function() {
+        var b = document.createElement('b');
+        b.innerHTML = '<!--[if lt IE 9]><i></i><![endif]-->';
+        return b.getElementsByTagName('i').length === 1;
+    },
 
     // change even or odd table rows' background when hover
     tdEvenOdd: function() {
@@ -576,8 +582,7 @@ var fedPris = {
 
             // get the num of selecte items and show it on page
             num = closestTable.find('input:checked').not('.select_all input').length;
-            closestTable.prev().find('.num_toBeSbmt').text(num);
-            closestTable.next().find('.num_toBeSbmt').text(num);
+            closestTable.siblings().find('.num_toBeSbmt').text(num);
 
             // get number of checkbox to detemine if highlight submit button
             if (num === 0) {
@@ -830,6 +835,10 @@ var fedPris = {
         customized usage: if want to show the second tab, then: prisTab('id name', '1');;
     */
     prisTab: function(tabId, index) {
+        if (tabId === undefined) {
+            tabId === '.tab'
+        }
+
         var tabIndex = index,
             tabTit = $(tabId + '>.tab_tit'),
             tabCon = $(tabId + '>.tab_con'),
@@ -1473,7 +1482,7 @@ var fedPris = {
             // caleId's parent node
             parentNode = $('.tab_con'),
             weekday = new Array(7),
-            meetingUrl = /*$('#data_meeting_prefix').val() + '?date=' + curYmd + '&' +*/ $('.tab_tit').find('.on').attr('data-meeting'),
+            meetingUrl = $('#data_meeting_prefix').val() + '?date=' + curYmd + '&' + $('.tab_tit').find('.on').attr('data-meeting'),
             roomUrl = $('.tab_tit .on').attr('data-room'),
             // define start time and end time when hover on .ui-cal-date
             hoverSTime, hoverSTime, hoverSTimeNum, hoverETimeNum,
@@ -2004,7 +2013,7 @@ var fedPris = {
             curMonth = startDate.slice(5, 7);
             curWeekday = startDate.slice(11, 14);
             curDate = startDate.slice(8, 10);
-            meetingUrl = /*$('#data_meeting_prefix').val() + '?date=' + curYmd + '&' +*/ $('.tab_con:first').siblings('.tab_tit').find('.on').attr('data-meeting');
+            meetingUrl = $('#data_meeting_prefix').val() + '?date=' + curYmd + '&' + $('.tab_con:first').siblings('.tab_tit').find('.on').attr('data-meeting');
             roomUrl = $('.tab_tit .on').attr('data-room');
 
             setCurYMWD(dateWrap, curYear, curMonth, curWeekday, curDate);
@@ -2020,7 +2029,7 @@ var fedPris = {
                 meetRoomWrap = $('.meet_cale_in').eq(thisIdx),
                 newCurYmd = $('.date_month_meeting').eq(thisIdx).attr('data-time');
 
-            meetingUrl = /*$('#data_meeting_prefix').val() + '?date=' + newCurYmd + '&' +*/ _this.attr('data-meeting');
+            meetingUrl = $('#data_meeting_prefix').val() + '?date=' + newCurYmd + '&' + _this.attr('data-meeting');
             roomUrl = $(this).attr('data-room');
             curBuilding = _this.text();
 
@@ -2082,7 +2091,7 @@ var fedPris = {
     },
 
     // get title property and change it to tooltip
-    titleTips: function(id, fixedLeft, fixedTop) {
+    titleTips: function(id) {
         var titEle,
             titEleClass,
             // hover element's title attribution
@@ -3140,7 +3149,56 @@ var fedPris = {
     },
 
     /**
-     * [renderStaffAtrackHour: render Atrack Hours for staff ito page]
+     * This is to fix highcharts not showing ie8 and lower.
+     * Check for ie version. If ie8 and ie8 lower, send the entire chart config to the
+     * Highcharts export server and display a generated image of the chart.
+     * @param  {string} id
+     * @param  {object} opt, setting option
+     */
+    fixHighchartForIE: function(id, svgData) {
+        var tip,
+            tipH,
+            img = $('.img_loading').clone(),
+            apiPrefix = $('#api_prefix').val();
+
+        $('#' + id).html(img);
+
+        $.ajax({
+            url: apiPrefix + '/HighchartsExport/ImageUrl',
+            type: 'POST',
+            contentType: 'text/xml',
+            data: svgData,
+            success: function(data) {
+                $('#' + id).html('');
+                $('<img>').attr('src', data.message).appendTo('#' + id);
+            }
+        });
+
+        // show a tip when page has chart and on ie8 and lower
+        tip = "<div id='chart_tip' class='chart_tip'><p>Charts are rendered as picture due to IE8 security fix. For better experience, please use modern browser like IE9+.</p><button type='button' class='del binIco'><i></i></button></div>";
+
+        if (fedPris.oldIE() && $('#chart_tip').length === 0) {
+            $('.pageWrapper').append(tip);
+            $('#chart_tip').stop().animate({
+                "top": 0
+            }, 800);
+        }
+
+        $(document).on('click', '.del', function() {
+            closeTip();
+        });
+
+        function closeTip() {
+            tipH = $('#chart_tip').outerHeight();
+
+            $('#chart_tip').stop().animate({
+                "top": "-" + tipH
+            }, 800);
+        }
+    },
+
+    /**
+     * renderStaffAtrackHour: render Atrack Hours for staff ito page
      */
     renderStaffAtrackHour: function() {
         var staffItoChart,
@@ -3160,6 +3218,7 @@ var fedPris = {
             chart: {
                 renderTo: 'atrack_chart',
                 type: 'column',
+                width: 888,
                 inverted: true,
                 reflow: false,
                 marginTop: 70,
@@ -3286,6 +3345,10 @@ var fedPris = {
                 staffItoChartOption.yAxis.plotLines[0].label.text = 'Current Hours ' + curHours;
                 // render chart
                 staffItoChart = new Highcharts.Chart(staffItoChartOption);
+                if (fedPris.oldIE()) {
+                    var svgData = staffItoChart.getSVG();
+                    fedPris.fixHighchartForIE(staffItoChartOption.chart.renderTo, svgData);
+                } 
                 // get child node of data when click
                 getStaff();
             });
@@ -3360,9 +3423,9 @@ var fedPris = {
             autoPlay: true
         });
         this.projStatus();
-        // this.renderSourceToFullCal('#mod_l_calendar', 'http://hzmis/Proxy/api/sp_calendar?site=gihz&title=gi-calendar', 'giActivity');
+        this.renderSourceToFullCal('#mod_l_calendar', 'http://hzmis/Proxy/api/sp_calendar?site=gihz&title=gi-calendar', 'giActivity');
         this.tree(); // organization tree of index page
-        // this.renderNewsToIdx('#gihz');
+        this.renderNewsToIdx('#gihz');
     },
 
     // billing pages functions
@@ -3437,7 +3500,7 @@ var fedPris = {
         this.feedback(); // feedback pop win
         this.navHover(); // nav hover  
         this.titleTips(); // get title property and change it to tooltip
-        this.titleTips('.ui-selectee', '92', '37'); // get title property and change it to tooltip
+        this.titleTips('.ui-selectee'); // get title property and change it to tooltip
         this.datePicker(); // date picker
         this.setDaultRoom(); // set default meeting room tab
         this.prisTab('#meet_room'); // tab switch
