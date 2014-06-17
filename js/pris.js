@@ -1177,24 +1177,27 @@ var fedPris = {
         $('.tab_chart .auto_btn_h16').click(function() {
             $(this).addClass('on').siblings('.auto_btn_h16').removeClass('on');
         });
-        $('#6_month').click(function() {
-            var chart = $('#report_con_1').highcharts(),
-                startMonth = curMon - 5;
-            // if current month equal or before June, then show data from January -- June.
-            if (startMonth < 1) {
-                chart.xAxis[0].setExtremes(0, 5);
-            } else {
-                chart.xAxis[0].setExtremes(startMonth, curMon);
-            }
-        });
-        $('#ytd').click(function() {
-            var chart = $('#report_con_1').highcharts();
-            chart.xAxis[0].setExtremes(0, curMon);
-        });
-        $('#1_year').click(function() {
-            var chart = $('#report_con_1').highcharts();
-            chart.xAxis[0].setExtremes(0, 11);
-        });
+
+        if(!fedPris.oldIE()){
+            $('#6_month').click(function() {
+                var chart = $('#report_con_1').highcharts(),
+                    startMonth = curMon - 5;
+                // if current month equal or before June, then show data from January -- June.
+                if (startMonth < 1) {
+                    chart.xAxis[0].setExtremes(0, 5);
+                } else {
+                    chart.xAxis[0].setExtremes(startMonth, curMon);
+                }
+            });
+            $('#ytd').click(function() {
+                var chart = $('#report_con_1').highcharts();
+                chart.xAxis[0].setExtremes(0, curMon);
+            });
+            $('#1_year').click(function() {
+                var chart = $('#report_con_1').highcharts();
+                chart.xAxis[0].setExtremes(0, 11);
+            });
+        }
     },
 
     // add class to staff table
@@ -2626,7 +2629,10 @@ var fedPris = {
                     data.length > 5 ? len = 5 : len = data.length;
 
                     for (i = 0; i < len; i++) {
-                        htmlStr += "<li class='item clearfix'><img src='" + data[i].row.ows_Pic.replace(/,/g, '') + "' /><div class='img_r'><h5><a target='_blank' href='" + data[i].row.ows_URL.split(',')[0] + "'>" + data[i].row.ows_LinkTitle + "</a></h5><p>" + data[i].row.ows_Time + "</p><p class='desc'>" + data[i].row.ows_Venue + "</p></div></li>"
+                        // if there are picture url and link
+                        if(data[i].row.ows_Pic !== undefined && data[i].row.ows_URL !== undefined){
+                            htmlStr += "<li class='item clearfix'><img src='" + data[i].row.ows_Pic.replace(/,/g, '') + "' /><div class='img_r'><h5><a target='_blank' href='" + data[i].row.ows_URL.split(',')[0] + "'>" + data[i].row.ows_LinkTitle + "</a></h5><p>" + data[i].row.ows_Time + "</p><p class='desc'>" + data[i].row.ows_Venue + "</p></div></li>";
+                        }
                     }
 
                     $(newId).html(htmlStr);
@@ -3208,7 +3214,7 @@ var fedPris = {
             arayEid = [],
             arayLeaderKey = [],
             defaultJson = $('#atrack_chart').attr('data-source-atrack'),
-            strMonth = new Date().getMonth(),
+            strMonth = new Date().getMonth() + 1,
             strYear = new Date().getFullYear(),
             strMonYear = strYear + '-' + strMonth + '-1',
             strTimeTxt = new Date().convertDate(strMonYear).format('MMM, yyyy');
@@ -3408,6 +3414,36 @@ var fedPris = {
         });
     },
 
+    // add class on to related nav by value of #cur_navTag
+    highlightNav: function(){
+        var curNav = $('#cur_navTag').val().replace(/\s/gi, '').toLowerCase();
+
+        switch (curNav) {
+            case 'mystaff':
+                setClassOn('.nav_staff');
+                break;
+            case 'myproject':
+                setClassOn('.nav_proj');
+                break;
+            case 'operationservice':
+                setClassOn('.nav_serv');
+                break;
+            case 'reportcenter':
+                setClassOn('.nav_repo');
+                break;
+            case 'systemmenu':
+                setClassOn('.nav_setting');
+                break;
+            default:
+                setClassOn('.nav_home');
+                break;
+        }
+
+        function setClassOn(id){
+            $(id).addClass('on').siblings().removeClass('on');
+        }
+    },
+
     // homepage functions
     homePage: function() {
         this.toTop(); // go to page top
@@ -3423,9 +3459,9 @@ var fedPris = {
             autoPlay: true
         });
         this.projStatus();
-        this.renderSourceToFullCal('#mod_l_calendar', 'http://hzmis/Proxy/api/sp_calendar?site=gihz&title=gi-calendar', 'giActivity');
+        // this.renderNewsToIdx('#gihz');
+        // this.renderSourceToFullCal('#mod_l_calendar', 'http://hzmis/Proxy/api/sp_calendar?site=gihz&title=gi-calendar', 'giActivity');
         this.tree(); // organization tree of index page
-        this.renderNewsToIdx('#gihz');
     },
 
     // billing pages functions
